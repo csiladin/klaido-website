@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Klaido Solutions — Websites for Home Service Businesses</title>
+<meta name="description" content="Klaido builds high-converting websites for HVAC, plumbing, landscaping, and other home service businesses. 14-day delivery. Free demo first.">
+<meta name="theme-color" content="#050507">
+<link rel="canonical" href="https://klaido.com/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://klaido.com/">
+<meta property="og:title" content="Klaido Solutions — Websites for Home Service Businesses">
+<meta property="og:description" content="High-converting websites for HVAC, plumbing, landscaping, and other home service businesses. Built in 14 days. Free demo first.">
+<meta property="og:image" content="https://klaido.com/og-image.jpg">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Klaido Solutions — Websites for Home Service Businesses">
+<meta name="twitter:description" content="High-converting websites for HVAC, plumbing, landscaping, and other home service businesses. Built in 14 days. Free demo first.">
+<meta name="twitter:image" content="https://klaido.com/og-image.jpg">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" as="style">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha384-d+vyQ0dYcymoP8ndq2hW7FGC50nqGdXUEgoOUGxbbkAJwZqL7h+jKN0GGgn9hFDS" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha384-poC0r6usQOX2Ayt/VGA+t81H6V3iN9L+Irz9iO8o+s0X20tLpzc9DOOtnKxhaQSE" crossorigin="anonymous" defer></script>
+<link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+<!-- Progress bar -->
+<div id="progress-bar" aria-hidden="true"></div>
+<!-- Grain overlay -->
+<div id="grain" aria-hidden="true"></div>
+<!-- Toast container -->
+<div id="toast-container" aria-live="polite"></div>
+<!-- Cursor -->
+<div id="cur" aria-hidden="true"></div>
+
+<!-- ─────────────────────────────────────────────
+     NAV
+───────────────────────────────────────────── -->
+<nav id="nav" aria-label="Main navigation">
+  <a href="#" class="nav-logo">Klaido <em>Solutions</em></a>
+  <ul class="nav-links">
+    <li><a href="#process">How It Works</a></li>
+    <li><a href="#testimonials">Results</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <button class="nav-cta" onclick="scrollToEl('#cta')">Get My Demo →</button>
+  <button id="nav-ham" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- Mobile nav -->
+<div id="mobile-nav" aria-hidden="true">
+  <a href="#process" onclick="toggleMobileNav()">How It Works</a>
+  <a href="#testimonials" onclick="toggleMobileNav()">Results</a>
+  <a href="#about" onclick="toggleMobileNav()">About</a>
+  <a href="#faq" onclick="toggleMobileNav()">FAQ</a>
+  <button class="btn-fill" onclick="toggleMobileNav();requestAnimationFrame(()=>scrollToEl('#cta'))" style="font-size:16px;padding:16px 40px">⚡ Get My Free Demo</button>
+</div>
+
+<main id="main">
+<!-- ─────────────────────────────────────────────
+     HERO
+───────────────────────────────────────────── -->
+<section id="hero">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-blob" aria-hidden="true"></div>
+  <span class="hero-bg-word" aria-hidden="true">Klaido</span>
+
+  <div class="w">
+    <div class="hero-inner">
+
+      <!-- Left -->
+      <div class="hero-left reveal">
+        <div class="live-badge"><div class="live-dot"></div><span id="visitor-count">24</span> contractors viewing this right now</div>
+        <div class="hero-index">01 — Built for the Trades</div>
+
+        <h1 class="hero-h1">
+          Your Work Is Great.<br>
+          <span class="line2">Your Website Should<br>
+          <em>Say That.</em></span>
+        </h1>
+
+        <p class="hero-sub">
+          Most contractors rely on word of mouth — and it works, until it doesn't. We build websites that bring in leads while you're on the job, so your schedule stays full without chasing anyone.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn-fill" onclick="scrollToEl('#cta')">Get My Free Demo →</button>
+          <button class="btn-ghost" onclick="scrollToEl('#process')">See How It Works</button>
+        </div>
+
+        <div class="hero-proof">
+          <div class="hero-proof-item">
+            <span class="hero-proof-num">73%</span>
+            <span class="hero-proof-label">of leads go to whoever responds first</span>
+          </div>
+          <div class="hero-proof-divider"></div>
+          <div class="hero-proof-item">
+            <span class="hero-proof-num">14</span>
+            <span class="hero-proof-label">days from signup to live site</span>
+          </div>
+          <div class="hero-proof-divider"></div>
+          <div class="hero-proof-item">
+            <span class="hero-proof-num">200+</span>
+            <span class="hero-proof-label">service businesses launched</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: missed call card -->
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <div class="hero-card-dot"></div>
+            <span class="hero-card-label">Lead Recovery — Live</span>
+            <span class="hero-card-status">Active</span>
+          </div>
+
+          <div class="hero-card-body">
+            <div class="hero-card-event card-step" id="card-step-1">
+              <div class="hero-card-icon">📞</div>
+              <div>
+                <div class="hero-card-event-title">Missed call — Dave M.</div>
+                <div class="hero-card-event-sub">HVAC repair · 11:42 PM</div>
+              </div>
+              <div class="hero-card-tag hero-card-tag--missed">Missed</div>
+            </div>
+
+            <div class="hero-card-arrow card-step" id="card-step-2">↓</div>
+
+            <div class="hero-card-event hero-card-event--captured card-step" id="card-step-3">
+              <div class="hero-card-icon">⚡</div>
+              <div>
+                <div class="hero-card-event-title">Lead captured automatically</div>
+                <div class="hero-card-event-sub">Name · Phone · Service needed</div>
+              </div>
+              <div class="hero-card-tag hero-card-tag--captured">Captured</div>
+            </div>
+
+            <div class="hero-card-arrow card-step" id="card-step-4">↓</div>
+
+            <div class="hero-card-event hero-card-event--booked card-step" id="card-step-5">
+              <div class="hero-card-icon">📅</div>
+              <div>
+                <div class="hero-card-event-title">Appointment booked</div>
+                <div class="hero-card-event-sub">Tomorrow, 9:00 AM · $380 job</div>
+              </div>
+              <div class="hero-card-tag hero-card-tag--booked">Booked</div>
+            </div>
+          </div>
+
+          <div class="hero-card-footer card-step" id="card-step-6">
+            <span class="hero-card-footer-note">Dave booked. You were already asleep.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Trust strip -->
+  <div class="hero-strip">
+    <div class="strip-stat">
+      <div class="strip-num">200<span style="color:var(--blue-s)">+</span></div>
+      <div class="strip-label">Websites built for service businesses</div>
+    </div>
+    <div class="strip-stat">
+      <div class="strip-num">37<span style="color:var(--blue-s)">%</span></div>
+      <div class="strip-label">Average increase in lead volume</div>
+    </div>
+    <div class="strip-stat">
+      <div class="strip-num">14</div>
+      <div class="strip-label">Days from contract to live site</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────
+     MARQUEE
+───────────────────────────────────────────── -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item">HVAC Contractors</div>
+    <div class="marquee-item">Landscaping Companies</div>
+    <div class="marquee-item">Plumbing Services</div>
+    <div class="marquee-item">Roofing Companies</div>
+    <div class="marquee-item">Electricians</div>
+    <div class="marquee-item">Pool Services</div>
+    <div class="marquee-item">Pest Control</div>
+    <div class="marquee-item">Cleaning Services</div>
+    <!-- Duplicate for seamless loop -->
+    <div class="marquee-item">HVAC Contractors</div>
+    <div class="marquee-item">Landscaping Companies</div>
+    <div class="marquee-item">Plumbing Services</div>
+    <div class="marquee-item">Roofing Companies</div>
+    <div class="marquee-item">Electricians</div>
+    <div class="marquee-item">Pool Services</div>
+    <div class="marquee-item">Pest Control</div>
+    <div class="marquee-item">Cleaning Services</div>
+  </div>
+</div>
+
+
+<!-- ─────────────────────────────────────────────
+     INDUSTRY CONTENT SECTION
+───────────────────────────────────────────── -->
+<section id="industry">
+  <div class="w">
+
+    <div class="section-header reveal">
+      <div>
+        <div class="section-kicker">02 — Tailored to Your Trade</div>
+        <h2 class="section-h2">
+          See What We'd Build<br>
+          for <em id="sectionLabel">Your Business</em>
+        </h2>
+      </div>
+    </div>
+
+    <!-- Trade picker -->
+    <div class="trade-picker reveal">
+      <button class="trade-btn" data-ind="hvac" onclick="selectInd('hvac')">
+        <span>❄️</span> HVAC
+      </button>
+      <button class="trade-btn" data-ind="land" onclick="selectInd('land')">
+        <span>🌿</span> Landscaping
+      </button>
+      <button class="trade-btn" data-ind="plumb" onclick="selectInd('plumb')">
+        <span>🔧</span> Plumbing
+      </button>
+      <button class="trade-btn" data-ind="other" onclick="selectInd('other')">
+        <span>⚡</span> Other Trade
+      </button>
+    </div>
+
+    <!-- No-selection state -->
+    <div class="no-sel reveal" id="noSel">
+      <div class="ns-big">Pick your trade above.</div>
+      <p>See a site built specifically for your industry.</p>
+    </div>
+
+    <!-- HVAC -->
+    <div class="ind-panel" id="p-hvac">
+      <div class="ind-layout">
+        <div>
+          <div class="ind-kicker">❄️ HVAC Companies</div>
+          <h3 class="ind-h3">Built for<br><em>HVAC Companies</em></h3>
+          <p class="ind-body">Homeowners search at all hours. Your website should be there when they do — answering their questions, earning their trust, and getting them to book before they scroll past.</p>
+          <ul class="ind-features">
+            <li>Emergency booking CTA above the fold</li>
+            <li>Financing & service plan upsells built in</li>
+            <li>Review aggregation & trust signals</li>
+          </ul>
+          <button class="btn-fill" style="background:var(--blue)" onclick="scrollToEl('#cta')">Get My HVAC Demo →</button>
+        </div>
+        <div class="browser-wrap">
+          <div class="browser-bar">
+            <div class="b-dot" style="background:#ff5f57"></div>
+            <div class="b-dot" style="background:#ffbd2e"></div>
+            <div class="b-dot" style="background:#28c840"></div>
+            <div class="b-url">frostflowac.com</div>
+          </div>
+          <div class="browser-hero" style="background:linear-gradient(135deg,#0f2027,#1a3a4a)">
+            <div class="browser-accent" style="background:#e85d2f"></div>
+            <div class="b-nav">
+              <div class="b-nav-logo">Riverside HVAC</div>
+              <div class="b-nav-links">
+                <span class="b-nav-link">Services</span>
+                <span class="b-nav-link">About</span>
+                <span class="b-nav-link">Financing</span>
+              </div>
+              <div class="b-nav-cta">📞 Call Now</div>
+            </div>
+            <div class="b-hero-content">
+              <div class="b-brand">Austin, TX · Licensed & Insured</div>
+              <div class="b-hl">AC Out? We'll Be<br>There in 60 Minutes.</div>
+              <div class="b-sub">Same-day HVAC repair & installation. Upfront pricing, no surprises.</div>
+              <div class="b-actions">
+                <div class="b-btn-p" style="background:#e85d2f;color:#fff">📞 (512) 448-9021</div>
+                <div class="b-btn-s">Get a Free Quote</div>
+              </div>
+            </div>
+            <div class="b-rating">★★★★★ <span>4.9 · 312 Google reviews</span></div>
+          </div>
+          <div class="browser-footer">
+            <div class="b-stat">✅ <strong>Licensed</strong>&nbsp;& Insured</div>
+            <div class="b-stat">🕐 <strong>24/7</strong>&nbsp;Emergency</div>
+            <div class="b-stat">💰 Upfront Pricing</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Landscaping -->
+    <div class="ind-panel" id="p-land">
+      <div class="ind-layout">
+        <div>
+          <div class="ind-kicker">🌿 Landscaping Companies</div>
+          <h3 class="ind-h3">Built for<br><em style="color:#3DCC8E">Landscaping Companies</em></h3>
+          <p class="ind-body">People hire landscapers they trust. Your website should show your work, tell your story, and make it easy for the right customers to reach you — before they call someone else.</p>
+          <ul class="ind-features">
+            <li>Before/after project gallery that converts</li>
+            <li>Seasonal service promotions & lead capture</li>
+            <li>Quote estimator that filters serious buyers</li>
+          </ul>
+          <button class="btn-fill" style="background:#2BA56D" onclick="scrollToEl('#cta')">Get My Landscaping Demo →</button>
+        </div>
+        <div class="browser-wrap">
+          <div class="browser-bar">
+            <div class="b-dot" style="background:#ff5f57"></div>
+            <div class="b-dot" style="background:#ffbd2e"></div>
+            <div class="b-dot" style="background:#28c840"></div>
+            <div class="b-url">greenscapepros.com</div>
+          </div>
+          <div class="browser-hero" style="background:linear-gradient(135deg,#1a2e1a,#2d4a2d)">
+            <div class="browser-accent" style="background:#3DCC8E"></div>
+            <div class="b-nav">
+              <div class="b-nav-logo">Oakwood Lawn</div>
+              <div class="b-nav-links">
+                <span class="b-nav-link">Services</span>
+                <span class="b-nav-link">Gallery</span>
+                <span class="b-nav-link">About</span>
+              </div>
+              <div class="b-nav-cta">Free Estimate</div>
+            </div>
+            <div class="b-hero-content">
+              <div class="b-brand">Denver, CO · Serving homeowners since 2014</div>
+              <div class="b-hl">Your Yard, Done Right.<br>Every Time.</div>
+              <div class="b-sub">Mowing, design, cleanups & seasonal services. Free estimates, no obligation.</div>
+              <div class="b-actions">
+                <div class="b-btn-p" style="background:#2d7a3a;color:#fff">📅 Book a Free Estimate</div>
+                <div class="b-btn-s">See Our Work</div>
+              </div>
+            </div>
+            <div class="b-rating">★★★★★ <span>4.8 · 194 Google reviews</span></div>
+          </div>
+          <div class="browser-footer">
+            <div class="b-stat">🌿 <strong>Free</strong>&nbsp;Estimates</div>
+            <div class="b-stat">📸 Before & After Gallery</div>
+            <div class="b-stat">📍 Local & Insured</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plumbing -->
+    <div class="ind-panel" id="p-plumb">
+      <div class="ind-layout">
+        <div>
+          <div class="ind-kicker">🔧 Plumbing Companies</div>
+          <h3 class="ind-h3">Built for<br><em style="color:#38C4E8">Plumbing Companies</em></h3>
+          <p class="ind-body">When a pipe bursts at midnight, people don't shop around — they call whoever looks most trustworthy. Your website should make that decision easy for them.</p>
+          <ul class="ind-features">
+            <li>Emergency call button pinned on mobile</li>
+            <li>Licensing, insurance & warranty trust signals</li>
+            <li>Same-day booking with automated confirmations</li>
+          </ul>
+          <button class="btn-fill" style="background:#1A9EC0" onclick="scrollToEl('#cta')">Get My Plumbing Demo →</button>
+        </div>
+        <div class="browser-wrap">
+          <div class="browser-bar">
+            <div class="b-dot" style="background:#ff5f57"></div>
+            <div class="b-dot" style="background:#ffbd2e"></div>
+            <div class="b-dot" style="background:#28c840"></div>
+            <div class="b-url">flowrightplumbing.com</div>
+          </div>
+          <div class="browser-hero" style="background:linear-gradient(135deg,#0a1628,#0f2a4a)">
+            <div class="browser-accent" style="background:#38C4E8"></div>
+            <div class="b-nav">
+              <div class="b-nav-logo">ClearFlow Plumbing</div>
+              <div class="b-nav-links">
+                <span class="b-nav-link">Services</span>
+                <span class="b-nav-link">Reviews</span>
+                <span class="b-nav-link">About</span>
+              </div>
+              <div class="b-nav-cta">📞 Call Now</div>
+            </div>
+            <div class="b-hero-content">
+              <div class="b-brand">Phoenix, AZ · Licensed & Background-Checked</div>
+              <div class="b-hl">Burst Pipe? Blocked Drain?<br>We're On Our Way.</div>
+              <div class="b-sub">Same-day emergency plumbing. We fix it right the first time, guaranteed.</div>
+              <div class="b-actions">
+                <div class="b-btn-p" style="background:#1a6fa8;color:#fff">📞 (602) 317-5588</div>
+                <div class="b-btn-s">Book Online</div>
+              </div>
+            </div>
+            <div class="b-rating">★★★★★ <span>4.9 · 341 Google reviews</span></div>
+          </div>
+          <div class="browser-footer">
+            <div class="b-stat">🚨 <strong>24/7</strong>&nbsp;Emergency</div>
+            <div class="b-stat">🏠 <strong>Same-Day</strong>&nbsp;Service</div>
+            <div class="b-stat">✅ Licensed & Insured</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other -->
+    <div class="ind-panel" id="p-other">
+      <div class="ind-layout">
+        <div>
+          <div class="ind-kicker">··· Service Businesses</div>
+          <h3 class="ind-h3">Built for<br><em>Your Trade</em></h3>
+          <p class="ind-body">Roofers, electricians, pool services — whatever you do, your customers are searching online right now. Your website should be the one that earns their call.</p>
+          <ul class="ind-features">
+            <li>Industry-specific messaging & imagery</li>
+            <li>Lead capture forms built to convert</li>
+            <li>Mobile-first design for local search</li>
+          </ul>
+          <button class="btn-fill" onclick="scrollToEl('#cta')">Get My Custom Demo →</button>
+        </div>
+        <div class="browser-wrap">
+          <div class="browser-bar">
+            <div class="b-dot" style="background:#ff5f57"></div>
+            <div class="b-dot" style="background:#ffbd2e"></div>
+            <div class="b-dot" style="background:#28c840"></div>
+            <div class="b-url">yourcompany.com</div>
+          </div>
+          <div class="browser-hero" style="background:linear-gradient(135deg,#1a1028,#2d1a4a)">
+            <div class="browser-accent" style="background:#8B5CF6"></div>
+            <div class="b-nav">
+              <div class="b-nav-logo">Brightside Electric</div>
+              <div class="b-nav-links">
+                <span class="b-nav-link">Services</span>
+                <span class="b-nav-link">Reviews</span>
+                <span class="b-nav-link">About</span>
+              </div>
+              <div class="b-nav-cta">Get a Quote</div>
+            </div>
+            <div class="b-hero-content">
+              <div class="b-brand">Nashville, TN · Master Licensed Electricians</div>
+              <div class="b-hl">Nashville's Most<br>Trusted Electrician.</div>
+              <div class="b-sub">Panel upgrades, rewiring, EV chargers & more. Same-week availability, upfront quotes.</div>
+              <div class="b-actions">
+                <div class="b-btn-p" style="background:#5b21b6;color:#fff">📞 (615) 802-4490</div>
+                <div class="b-btn-s">Get a Free Quote</div>
+              </div>
+            </div>
+            <div class="b-rating">★★★★★ <span>4.9 · 218 Google reviews</span></div>
+          </div>
+          <div class="browser-footer">
+            <div class="b-stat">⚡ <strong>Master</strong>&nbsp;Licensed</div>
+            <div class="b-stat">📅 Same-Week Availability</div>
+            <div class="b-stat">✅ Fully Insured</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ─────────────────────────────────────────────
+     PROCESS
+───────────────────────────────────────────── -->
+<section id="process">
+  <div class="w">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-kicker">03 — Simple Process</div>
+        <h2 class="section-h2">From First Call to<br><em>Live Website</em></h2>
+      </div>
+      <p style="font-size:16px;color:var(--dim);line-height:1.75;max-width:340px">Three steps. Zero stress. Your site goes live in 14 days — or we work for free.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <div class="process-step-num">01</div>
+        <div class="process-icon">📋</div>
+        <div class="process-title">Discovery Call</div>
+        <div class="process-desc">30 minutes. We learn your business, your customers, your goals. No pitch, no pressure — just a conversation that shapes everything.</div>
+        <div class="process-badge">⚡ Day 1</div>
+      </div>
+      <div class="process-step reveal d1">
+        <div class="process-step-num">02</div>
+        <div class="process-icon">🎨</div>
+        <div class="process-title">We Build It</div>
+        <div class="process-desc">Custom design, built for your trade, optimised to convert. Industry-specific copy, layout, and lead capture — done for you, from scratch.</div>
+        <div class="process-badge">⚡ Days 2–13</div>
+      </div>
+      <div class="process-step reveal d2">
+        <div class="process-step-num">03</div>
+        <div class="process-icon">🚀</div>
+        <div class="process-title">Go Live. Get Leads.</div>
+        <div class="process-desc">You approve. We launch. Your site captures leads 24/7 while you focus on the work — no missed calls, no lost jobs.</div>
+        <div class="process-badge">⚡ Day 14</div>
+      </div>
+    </div>
+
+    <div class="results-grid" style="margin-top:60px">
+      <div class="result-item reveal">
+        <span class="result-num" data-count="200" data-suffix="+">200+</span>
+        <div class="result-label">Sites built for service businesses</div>
+      </div>
+      <div class="result-item reveal d1">
+        <span class="result-num" data-count="37" data-suffix="%">37%</span>
+        <div class="result-label">Average increase in lead volume</div>
+      </div>
+      <div class="result-item reveal d2">
+        <span class="result-num" data-count="14" data-suffix=" days">14 days</span>
+        <div class="result-label">Contract to live site</div>
+      </div>
+      <div class="result-item reveal d3">
+        <span class="result-num" data-count="98" data-suffix="%">98%</span>
+        <div class="result-label">Client satisfaction rate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────
+     ABOUT
+───────────────────────────────────────────── -->
+<section id="about">
+  <div class="w">
+    <div class="about-inner reveal">
+      <div class="about-left">
+        <div class="section-kicker">04 — Who's Behind This</div>
+        <h2 class="section-h2">Not an Agency.<br><em>A Builder.</em></h2>
+        <div class="about-visual">
+          <div class="about-avatar">Cl</div>
+          <div class="about-tags">
+            <span class="about-tag">Computer Science</span>
+            <span class="about-tag">Cybersecurity</span>
+            <span class="about-tag">Automation</span>
+            <span class="about-tag">Lead Systems</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-right">
+        <p class="about-p">I'm Clay. My background is in computer science, cybersecurity, and automation — but I've never been interested in building things just to say I built them.</p>
+        <p class="about-p">I focus on service businesses because the gap is obvious. These are people who are great at what they do — HVAC, plumbing, landscaping — but their online presence doesn't reflect that. Leads slip through. Calls go unanswered. Their website works against them.</p>
+        <p class="about-p">Klaido exists to fix that. Not with templates and generic copy, but with systems — websites built to handle leads, respond fast, and turn interest into booked jobs. Things that work in the background while you're on the job.</p>
+        <div class="about-sig">
+          <div class="about-sig-name">Clay</div>
+          <div class="about-sig-title">Founder, Klaido Solutions</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────
+     TESTIMONIALS
+───────────────────────────────────────────── -->
+<section id="testimonials">
+  <div class="w">
+    <div class="section-kicker reveal" style="margin-bottom:60px">05 — Real Results</div>
+
+    <div class="testi-feature reveal">
+      <div class="testi-feature-quote">"</div>
+      <blockquote class="testi-feature-text">Within 3 weeks of launching, our phone was ringing off the hook. We booked 14 new HVAC installs in the first month alone.</blockquote>
+      <div class="testi-feature-author">
+        <div class="testi-feature-avatar">❄️</div>
+        <div>
+          <cite class="testi-feature-name">Marcus T.</cite>
+          <div class="testi-feature-role">Owner, HVAC Company — Austin, TX</div>
+        </div>
+        <div class="testi-stars" style="margin-left:auto">★★★★★</div>
+      </div>
+    </div>
+
+    <div class="testi-two-col">
+      <div class="testi-small reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p>"I'd been burned by web agencies before. Klaido delivered in 12 days. Quote requests tripled. The ROI paid for itself in week one."</p>
+        <div class="testi-small-author">
+          <span class="testi-small-avatar">🌿</span>
+          <div>
+            <div class="testi-small-name">Sarah W.</div>
+            <div class="testi-small-role">Owner, Landscaping Co. — Denver, CO</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-small reveal d1">
+        <div class="testi-stars">★★★★★</div>
+        <p>"We had a site before Klaido. It was embarrassing. Emergency calls went up 40% in 30 days. No joke."</p>
+        <div class="testi-small-author">
+          <span class="testi-small-avatar">🔧</span>
+          <div>
+            <div class="testi-small-name">Dave M.</div>
+            <div class="testi-small-role">Founder, Plumbing Co. — Phoenix, AZ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────
+     GUARANTEE
+───────────────────────────────────────────── -->
+<section id="guarantee">
+  <div class="w">
+    <div class="guarantee-inner reveal">
+      <div class="guarantee-badge">
+        <div class="guarantee-badge-big">50</div>
+        <div class="guarantee-badge-small">%<br>To Start</div>
+      </div>
+      <div class="guarantee-text">
+        <h3>You See It <em>Before You Commit.</em></h3>
+        <p>We build your demo first, free. If you want to move forward, we start with a 50% deposit. The remaining 50% is due when you approve the final site.</p>
+        <div class="guarantee-pills">
+          <div class="gpill">✓ Free Demo First</div>
+          <div class="gpill">✓ 50% To Start</div>
+          <div class="gpill">✓ 50% On Approval</div>
+          <div class="gpill">✓ 14-Day Delivery</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────
+     FAQ
+───────────────────────────────────────────── -->
+<section id="faq">
+  <div class="w">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-kicker">06 — Questions Answered</div>
+        <h2 class="section-h2">Everything You<br><em>Need to Know</em></h2>
+      </div>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How long does it actually take?<div class="faq-icon" aria-hidden="true">+</div></button>
+        <div class="faq-a"><div class="faq-a-inner">14 days from the moment you sign. Day 1 is a discovery call. Days 2–13 are design and development. Day 14 is your live launch. If we go over 14 days for any reason on our end, you pay nothing until we deliver.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What if I already have a website?<div class="faq-icon" aria-hidden="true">+</div></button>
+        <div class="faq-a"><div class="faq-a-inner">Perfect. Most of our clients come to us with an existing site that isn't converting. We analyze what's failing, build a completely new site from scratch, and migrate everything over. Your old site stays live until the new one is ready.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What does it cost?<div class="faq-icon" aria-hidden="true">+</div></button>
+        <div class="faq-a"><div class="faq-a-inner">Every project is scoped individually based on your business size and goals. We start with a free demo so you can see exactly what you'd get before spending a cent. Most service businesses invest between $1,500–$4,000 for a complete site build.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Do I need to know anything about websites?<div class="faq-icon" aria-hidden="true">+</div></button>
+        <div class="faq-a"><div class="faq-a-inner">Zero tech knowledge required. We handle everything — design, development, copywriting, and launch. All you need to do is answer a few questions about your business. We do the rest.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What happens after the site launches?<div class="faq-icon" aria-hidden="true">+</div></button>
+        <div class="faq-a"><div class="faq-a-inner">We don't disappear. Every site comes with 30 days of post-launch support included. Need to update services, prices, or photos? We handle it. Your site grows as your business grows.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────
+     CTA
+───────────────────────────────────────────── -->
+<section id="cta">
+  <div class="w">
+    <div class="cta-inner reveal">
+      <div class="cta-left">
+        <div class="section-kicker">07 — Get Started Free</div>
+        <h2 class="cta-h2">See What Your<br>Website <em>Could Be</em></h2>
+        <p class="cta-body">We'll build you a free personalised demo — designed around your trade, your area, your customers. No commitment. No pitch. Just a look at what's possible.</p>
+        <div id="lead-form-wrap">
+          <form class="lead-form" onsubmit="submitLead(event)" novalidate>
+            <div class="lead-row">
+              <input class="lead-input" type="text" placeholder="Your name" autocomplete="name" aria-label="Your name" required>
+              <input class="lead-input" type="email" placeholder="Email address" autocomplete="email" aria-label="Email address" required>
+            </div>
+            <input class="lead-input" type="tel" placeholder="Phone number" autocomplete="tel" aria-label="Phone number" required>
+            <input class="lead-input" type="text" placeholder="Business type (e.g. HVAC, Plumbing...)" autocomplete="organization" aria-label="Business type" required>
+            <button class="btn-fill" type="submit" style="font-size:15px;padding:16px 36px;width:100%;justify-content:center">Show Me What's Possible →</button>
+          </form>
+          <div class="cta-small" style="margin-top:12px">Takes 60 seconds · No credit card · 100% free</div>
+        </div>
+        <div class="form-success" id="form-success">
+          <span class="form-success-icon">🎉</span>
+          <div class="form-success-h">Demo request received.</div>
+          <div class="form-success-p">We'll reach out within 24 hours with your custom site preview. Keep an eye on your inbox.</div>
+        </div>
+      </div>
+      <div class="cta-right">
+        <div style="background:var(--card);border:1px solid rgba(75,110,255,.2);border-radius:24px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.6),0 0 60px rgba(75,110,255,.1);animation:float3d 8s ease-in-out infinite">
+          <div style="padding:20px 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s ease-in-out infinite"></div>
+            <span style="font-size:12px;color:var(--dim)">Lead Dashboard — Live</span>
+            <span style="margin-left:auto;font-size:11px;font-weight:600;color:var(--green)">+37% this month</span>
+          </div>
+          <div style="padding:24px">
+            <div style="font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px">Incoming leads today</div>
+            <div id="lead-ticker" style="display:flex;flex-direction:column;gap:10px"></div>
+          </div>
+          <div style="padding:16px 24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-family:var(--serif);font-size:36px;font-weight:400;line-height:1;background:linear-gradient(135deg,var(--white),var(--blue-s));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text" id="lead-total">12</div>
+              <div style="font-size:11px;color:var(--dim)">leads today</div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-family:var(--serif);font-size:36px;font-weight:400;line-height:1;color:var(--green)">$4,200</div>
+              <div style="font-size:11px;color:var(--dim)">est. revenue</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────
+     FOOTER
+───────────────────────────────────────────── -->
+<footer aria-label="Site footer">
+  <div class="w">
+    <div class="footer-cols">
+      <div>
+        <div class="footer-logo" style="margin-bottom:14px">Klaido <em>Solutions</em></div>
+        <div class="footer-copy" style="line-height:1.8;max-width:220px">High-converting websites for home service businesses. Built in 14 days. Guaranteed.</div>
+      </div>
+      <div>
+        <div class="footer-heading">Services</div>
+        <div class="footer-links">
+          <a href="#industry" class="footer-link">HVAC Websites</a>
+          <a href="#industry" class="footer-link">Plumbing Websites</a>
+          <a href="#industry" class="footer-link">Landscaping Websites</a>
+          <a href="#industry" class="footer-link">All Trades</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Company</div>
+        <div class="footer-links">
+          <a href="#process" class="footer-link">How It Works</a>
+          <a href="#testimonials" class="footer-link">Results</a>
+          <a href="#faq" class="footer-link">FAQ</a>
+          <a href="#cta" class="footer-link">Get a Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-inner" style="padding:24px 0">
+      <div class="footer-copy">© 2026 Klaido Solutions. All rights reserved.</div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <div class="live-dot" style="width:6px;height:6px"></div>
+        <span style="font-size:12px;color:var(--green)">All systems operational</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile floating call button -->
+<button id="mobile-cta" onclick="scrollToEl('#cta')" aria-label="Get a free demo">📞</button>
+
+<!-- Sticky bar -->
+<div id="sticky-bar">
+  <div class="sticky-left">
+    <div class="sticky-pulse"></div>
+    <div class="sticky-copy"><strong>Klaido</strong> — websites that actually convert</div>
+  </div>
+  <div class="sticky-scarcity">Free demo · No commitment</div>
+  <button class="btn-fill" onclick="scrollToEl('#cta')" style="padding:10px 24px;font-size:13px">See What's Possible →</button>
+</div>
+
+<!-- Exit intent modal -->
+<div id="exit-modal" role="dialog" aria-modal="true" aria-labelledby="exit-heading">
+  <div class="exit-box">
+    <button class="exit-close" onclick="closeExit()">✕</button>
+    <span class="exit-emoji">⚡</span>
+    <h2 class="exit-h" id="exit-heading">Wait — before you go.<br><em>This takes 30 seconds.</em></h2>
+    <p class="exit-p">Drop your email and we'll send you a personalised demo of what your website could look like. No calls. No spam. Just results.</p>
+    <input class="exit-input" id="exit-email" type="email" placeholder="your@email.com" aria-label="Your email address">
+    <button class="btn-fill" style="width:100%;justify-content:center;padding:14px" onclick="submitExit()">Send Me The Free Demo →</button>
+    <button class="exit-skip" onclick="closeExit()">No thanks, I'm not interested</button>
+  </div>
+</div>
+
+</main>
+
+<!-- ─────────────────────────────────────────────
+     JAVASCRIPT
+───────────────────────────────────────────── -->
+
+<script type="module" src="/src/main.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Klaido Solutions",
+  "url": "https://klaido.com",
+  "description": "High-converting websites for home service businesses. Built in 14 days.",
+  "areaServed": "US",
+  "serviceType": ["Web Design", "Web Development", "Lead Generation"],
+  "offers": {
+    "@type": "Offer",
+    "description": "Free personalised demo site before any commitment"
+  }
+}
+</script>
+</body>
+</html>
