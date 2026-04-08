@@ -323,7 +323,40 @@ nav.scrolled{
   background:rgba(61,204,142,.06);
   border-color:rgba(61,204,142,.2);
 }
-.hero-card-icon{font-size:20px;flex-shrink:0}
+.hero-card-icon{
+  width:28px;height:28px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+}
+.hero-card-icon--missed{
+  background:rgba(255,80,80,.15);
+  border:1px solid rgba(255,80,80,.3);
+}
+.hero-card-icon--missed::after{
+  content:'';width:10px;height:10px;border-radius:50%;
+  background:rgba(255,80,80,.8);
+}
+.hero-card-icon--captured{
+  background:rgba(75,110,255,.15);
+  border:1px solid rgba(75,110,255,.3);
+}
+.hero-card-icon--captured::after{
+  content:'';width:0;height:0;
+  border-left:6px solid rgba(75,110,255,.9);
+  border-top:4px solid transparent;
+  border-bottom:4px solid transparent;
+  margin-left:2px;
+}
+.hero-card-icon--booked{
+  background:rgba(61,204,142,.15);
+  border:1px solid rgba(61,204,142,.3);
+}
+.hero-card-icon--booked::after{
+  content:'';width:6px;height:10px;
+  border-right:2px solid rgba(61,204,142,.9);
+  border-bottom:2px solid rgba(61,204,142,.9);
+  transform:rotate(45deg);
+  margin-bottom:3px;
+}
 .hero-card-event-title{font-size:13px;font-weight:500;margin-bottom:2px}
 .hero-card-event-sub{font-size:11px;color:var(--dim)}
 .hero-card-tag{
@@ -642,7 +675,48 @@ nav.scrolled{
 
 .cta-right{
   position:relative;
-  perspective: 1200px;
+}
+.cta-what-happens{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:36px 32px;
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+}
+.cwh-title{
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--dim);
+}
+.cwh-step{
+  display:flex;
+  gap:18px;
+  align-items:flex-start;
+}
+.cwh-num{
+  width:28px;height:28px;border-radius:50%;
+  background:rgba(75,110,255,.12);
+  border:1px solid rgba(75,110,255,.25);
+  color:var(--blue-s);
+  font-size:13px;font-weight:600;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  margin-top:1px;
+}
+.cwh-text{
+  font-size:15px;
+  color:var(--white);
+  line-height:1.6;
+}
+.cwh-note{
+  font-size:13px;
+  color:var(--dim);
+  padding-top:4px;
+  border-top:1px solid var(--line);
 }
 @media(max-width:900px){
   .cta-inner{grid-template-columns:1fr}

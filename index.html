@@ -4,19 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Klaido Solutions — Websites for Home Service Businesses</title>
-<meta name="description" content="Klaido builds high-converting websites for HVAC, plumbing, landscaping, and other home service businesses. 14-day delivery. Free demo first.">
+<meta name="description" content="Klaido builds websites for HVAC, plumbing, landscaping, and other home service contractors. Free demo first. Live in 14 days.">
 <meta name="theme-color" content="#050507">
 <link rel="canonical" href="https://klaido.com/">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://klaido.com/">
 <meta property="og:title" content="Klaido Solutions — Websites for Home Service Businesses">
-<meta property="og:description" content="High-converting websites for HVAC, plumbing, landscaping, and other home service businesses. Built in 14 days. Free demo first.">
+<meta property="og:description" content="Websites for HVAC, plumbing, landscaping, and other home service contractors. Free demo built before you commit. Live in 14 days.">
 <meta property="og:image" content="https://klaido.com/og-image.jpg">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Klaido Solutions — Websites for Home Service Businesses">
-<meta name="twitter:description" content="High-converting websites for HVAC, plumbing, landscaping, and other home service businesses. Built in 14 days. Free demo first.">
+<meta name="twitter:description" content="Websites for HVAC, plumbing, landscaping, and other home service contractors. Free demo built before you commit. Live in 14 days.">
 <meta name="twitter:image" content="https://klaido.com/og-image.jpg">
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,7 +50,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
-  <button class="nav-cta" onclick="scrollToEl('#cta')">Get My Demo →</button>
+  <button class="nav-cta" onclick="scrollToEl('#cta')">Free Demo →</button>
   <button id="nav-ham" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
 </nav>
 
@@ -60,7 +60,7 @@
   <a href="#testimonials" onclick="toggleMobileNav()">Results</a>
   <a href="#about" onclick="toggleMobileNav()">About</a>
   <a href="#faq" onclick="toggleMobileNav()">FAQ</a>
-  <button class="btn-fill" onclick="toggleMobileNav();requestAnimationFrame(()=>scrollToEl('#cta'))" style="font-size:16px;padding:16px 40px">⚡ Get My Free Demo</button>
+  <button class="btn-fill" onclick="toggleMobileNav();requestAnimationFrame(()=>scrollToEl('#cta'))" style="font-size:16px;padding:16px 40px">Request a Free Demo</button>
 </div>
 
 <main id="main">
@@ -77,40 +77,23 @@
 
       <!-- Left -->
       <div class="hero-left reveal">
-        <div class="live-badge"><div class="live-dot"></div><span id="visitor-count">24</span> contractors viewing this right now</div>
-        <div class="hero-index">01 — Built for the Trades</div>
+        <div class="hero-index">Websites for Home Service Contractors</div>
 
         <h1 class="hero-h1">
           Your Work Is Great.<br>
           <span class="line2">Your Website Should<br>
-          <em>Say That.</em></span>
+          <em>Prove It.</em></span>
         </h1>
 
         <p class="hero-sub">
-          Most contractors rely on word of mouth — and it works, until it doesn't. We build websites that bring in leads while you're on the job, so your schedule stays full without chasing anyone.
+          Most contractors get jobs through referrals — until a slow month hits and the phone goes quiet. I build websites that keep leads coming in whether referrals are or not.
         </p>
 
         <div class="hero-actions">
-          <button class="btn-fill" onclick="scrollToEl('#cta')">Get My Free Demo →</button>
-          <button class="btn-ghost" onclick="scrollToEl('#process')">See How It Works</button>
+          <button class="btn-fill" onclick="scrollToEl('#cta')">See What I'd Build for You →</button>
+          <button class="btn-ghost" onclick="scrollToEl('#process')">How it works</button>
         </div>
 
-        <div class="hero-proof">
-          <div class="hero-proof-item">
-            <span class="hero-proof-num">73%</span>
-            <span class="hero-proof-label">of leads go to whoever responds first</span>
-          </div>
-          <div class="hero-proof-divider"></div>
-          <div class="hero-proof-item">
-            <span class="hero-proof-num">14</span>
-            <span class="hero-proof-label">days from signup to live site</span>
-          </div>
-          <div class="hero-proof-divider"></div>
-          <div class="hero-proof-item">
-            <span class="hero-proof-num">200+</span>
-            <span class="hero-proof-label">service businesses launched</span>
-          </div>
-        </div>
       </div>
 
       <!-- Right: missed call card -->
@@ -118,13 +101,12 @@
         <div class="hero-card">
           <div class="hero-card-top">
             <div class="hero-card-dot"></div>
-            <span class="hero-card-label">Lead Recovery — Live</span>
-            <span class="hero-card-status">Active</span>
+            <span class="hero-card-label">What your site does at 11pm</span>
           </div>
 
           <div class="hero-card-body">
             <div class="hero-card-event card-step" id="card-step-1">
-              <div class="hero-card-icon">📞</div>
+              <div class="hero-card-icon hero-card-icon--missed"></div>
               <div>
                 <div class="hero-card-event-title">Missed call — Dave M.</div>
                 <div class="hero-card-event-sub">HVAC repair · 11:42 PM</div>
@@ -135,9 +117,9 @@
             <div class="hero-card-arrow card-step" id="card-step-2">↓</div>
 
             <div class="hero-card-event hero-card-event--captured card-step" id="card-step-3">
-              <div class="hero-card-icon">⚡</div>
+              <div class="hero-card-icon hero-card-icon--captured"></div>
               <div>
-                <div class="hero-card-event-title">Lead captured automatically</div>
+                <div class="hero-card-event-title">Contact form submitted</div>
                 <div class="hero-card-event-sub">Name · Phone · Service needed</div>
               </div>
               <div class="hero-card-tag hero-card-tag--captured">Captured</div>
@@ -146,7 +128,7 @@
             <div class="hero-card-arrow card-step" id="card-step-4">↓</div>
 
             <div class="hero-card-event hero-card-event--booked card-step" id="card-step-5">
-              <div class="hero-card-icon">📅</div>
+              <div class="hero-card-icon hero-card-icon--booked"></div>
               <div>
                 <div class="hero-card-event-title">Appointment booked</div>
                 <div class="hero-card-event-sub">Tomorrow, 9:00 AM · $380 job</div>
@@ -167,16 +149,16 @@
   <!-- Trust strip -->
   <div class="hero-strip">
     <div class="strip-stat">
-      <div class="strip-num">200<span style="color:var(--blue-s)">+</span></div>
-      <div class="strip-label">Websites built for service businesses</div>
-    </div>
-    <div class="strip-stat">
-      <div class="strip-num">37<span style="color:var(--blue-s)">%</span></div>
-      <div class="strip-label">Average increase in lead volume</div>
-    </div>
-    <div class="strip-stat">
       <div class="strip-num">14</div>
-      <div class="strip-label">Days from contract to live site</div>
+      <div class="strip-label">Days from deposit to live site, guaranteed</div>
+    </div>
+    <div class="strip-stat">
+      <div class="strip-num">$0</div>
+      <div class="strip-label">Due until you've seen your demo and said yes</div>
+    </div>
+    <div class="strip-stat">
+      <div class="strip-num">1</div>
+      <div class="strip-label">Person building your site — not a team of interns</div>
     </div>
   </div>
 </section>
@@ -185,24 +167,8 @@
      MARQUEE
 ───────────────────────────────────────────── -->
 <div class="marquee-wrap">
-  <div class="marquee-track">
-    <div class="marquee-item">HVAC Contractors</div>
-    <div class="marquee-item">Landscaping Companies</div>
-    <div class="marquee-item">Plumbing Services</div>
-    <div class="marquee-item">Roofing Companies</div>
-    <div class="marquee-item">Electricians</div>
-    <div class="marquee-item">Pool Services</div>
-    <div class="marquee-item">Pest Control</div>
-    <div class="marquee-item">Cleaning Services</div>
-    <!-- Duplicate for seamless loop -->
-    <div class="marquee-item">HVAC Contractors</div>
-    <div class="marquee-item">Landscaping Companies</div>
-    <div class="marquee-item">Plumbing Services</div>
-    <div class="marquee-item">Roofing Companies</div>
-    <div class="marquee-item">Electricians</div>
-    <div class="marquee-item">Pool Services</div>
-    <div class="marquee-item">Pest Control</div>
-    <div class="marquee-item">Cleaning Services</div>
+  <div style="text-align:center;font-size:13px;letter-spacing:.08em;color:var(--dim);text-transform:uppercase;padding:18px 24px">
+    HVAC &nbsp;·&nbsp; Plumbing &nbsp;·&nbsp; Landscaping &nbsp;·&nbsp; Roofing &nbsp;·&nbsp; Electrical &nbsp;·&nbsp; Pool Service &nbsp;·&nbsp; Pest Control &nbsp;·&nbsp; Any Trade
   </div>
 </div>
 
@@ -215,49 +181,40 @@
 
     <div class="section-header reveal">
       <div>
-        <div class="section-kicker">02 — Tailored to Your Trade</div>
+        <div class="section-kicker">Pick your trade</div>
         <h2 class="section-h2">
-          See What We'd Build<br>
-          for <em id="sectionLabel">Your Business</em>
+          What I'd Build<br>
+          for <em id="sectionLabel">Your Trade</em>
         </h2>
       </div>
     </div>
 
     <!-- Trade picker -->
     <div class="trade-picker reveal">
-      <button class="trade-btn" data-ind="hvac" onclick="selectInd('hvac')">
-        <span>❄️</span> HVAC
-      </button>
-      <button class="trade-btn" data-ind="land" onclick="selectInd('land')">
-        <span>🌿</span> Landscaping
-      </button>
-      <button class="trade-btn" data-ind="plumb" onclick="selectInd('plumb')">
-        <span>🔧</span> Plumbing
-      </button>
-      <button class="trade-btn" data-ind="other" onclick="selectInd('other')">
-        <span>⚡</span> Other Trade
-      </button>
+      <button class="trade-btn" data-ind="hvac" onclick="selectInd('hvac')">HVAC</button>
+      <button class="trade-btn" data-ind="land" onclick="selectInd('land')">Landscaping</button>
+      <button class="trade-btn" data-ind="plumb" onclick="selectInd('plumb')">Plumbing</button>
+      <button class="trade-btn" data-ind="other" onclick="selectInd('other')">Other Trade</button>
     </div>
 
     <!-- No-selection state -->
     <div class="no-sel reveal" id="noSel">
-      <div class="ns-big">Pick your trade above.</div>
-      <p>See a site built specifically for your industry.</p>
+      <div class="ns-big">Select a trade above.</div>
+      <p>I'll show you what I'd actually build for that type of business.</p>
     </div>
 
     <!-- HVAC -->
     <div class="ind-panel" id="p-hvac">
       <div class="ind-layout">
         <div>
-          <div class="ind-kicker">❄️ HVAC Companies</div>
-          <h3 class="ind-h3">Built for<br><em>HVAC Companies</em></h3>
-          <p class="ind-body">Homeowners search at all hours. Your website should be there when they do — answering their questions, earning their trust, and getting them to book before they scroll past.</p>
+          <h3 class="ind-h3">HVAC<br><em>Websites</em></h3>
+          <p class="ind-body">AC goes out at 10pm on a Friday. The homeowner searches, finds the first site that looks credible, and calls. That site should be yours.</p>
           <ul class="ind-features">
-            <li>Emergency booking CTA above the fold</li>
-            <li>Financing & service plan upsells built in</li>
-            <li>Review aggregation & trust signals</li>
+            <li>Call button front and center — not buried in the footer</li>
+            <li>Financing options shown upfront so price objections disappear earlier</li>
+            <li>Your Google reviews pulled in automatically</li>
           </ul>
-          <button class="btn-fill" style="background:var(--blue)" onclick="scrollToEl('#cta')">Get My HVAC Demo →</button>
+          <button class="btn-fill" style="background:var(--blue)" onclick="scrollToEl('#cta')">Request a Free HVAC Demo →</button>
         </div>
         <div class="browser-wrap">
           <div class="browser-bar">
@@ -282,11 +239,11 @@
               <div class="b-hl">AC Out? We'll Be<br>There in 60 Minutes.</div>
               <div class="b-sub">Same-day HVAC repair & installation. Upfront pricing, no surprises.</div>
               <div class="b-actions">
-                <div class="b-btn-p" style="background:#e85d2f;color:#fff">📞 (512) 448-9021</div>
+                <div class="b-btn-p" style="background:#e85d2f;color:#fff">📞 Call Now</div>
                 <div class="b-btn-s">Get a Free Quote</div>
               </div>
             </div>
-            <div class="b-rating">★★★★★ <span>4.9 · 312 Google reviews</span></div>
+            <div class="b-rating">★★★★★ <span>4.9 · 200+ Google reviews</span></div>
           </div>
           <div class="browser-footer">
             <div class="b-stat">✅ <strong>Licensed</strong>&nbsp;& Insured</div>
@@ -301,15 +258,14 @@
     <div class="ind-panel" id="p-land">
       <div class="ind-layout">
         <div>
-          <div class="ind-kicker">🌿 Landscaping Companies</div>
-          <h3 class="ind-h3">Built for<br><em style="color:#3DCC8E">Landscaping Companies</em></h3>
-          <p class="ind-body">People hire landscapers they trust. Your website should show your work, tell your story, and make it easy for the right customers to reach you — before they call someone else.</p>
+          <h3 class="ind-h3">Landscaping<br><em style="color:#3DCC8E">Websites</em></h3>
+          <p class="ind-body">Landscaping is visual work. If your website doesn't show it well, you're asking people to hire you on faith. Before/after photos, clear pricing, and a simple way to request a quote — that's what converts.</p>
           <ul class="ind-features">
-            <li>Before/after project gallery that converts</li>
-            <li>Seasonal service promotions & lead capture</li>
-            <li>Quote estimator that filters serious buyers</li>
+            <li>Before/after gallery that loads fast and actually looks good on mobile</li>
+            <li>Seasonal promotions you can update yourself without touching code</li>
+            <li>Quote request form that asks enough to filter out tire-kickers</li>
           </ul>
-          <button class="btn-fill" style="background:#2BA56D" onclick="scrollToEl('#cta')">Get My Landscaping Demo →</button>
+          <button class="btn-fill" style="background:#2BA56D" onclick="scrollToEl('#cta')">Request a Free Landscaping Demo →</button>
         </div>
         <div class="browser-wrap">
           <div class="browser-bar">
@@ -338,7 +294,7 @@
                 <div class="b-btn-s">See Our Work</div>
               </div>
             </div>
-            <div class="b-rating">★★★★★ <span>4.8 · 194 Google reviews</span></div>
+            <div class="b-rating">★★★★★ <span>4.8 · 150+ Google reviews</span></div>
           </div>
           <div class="browser-footer">
             <div class="b-stat">🌿 <strong>Free</strong>&nbsp;Estimates</div>
@@ -353,15 +309,14 @@
     <div class="ind-panel" id="p-plumb">
       <div class="ind-layout">
         <div>
-          <div class="ind-kicker">🔧 Plumbing Companies</div>
-          <h3 class="ind-h3">Built for<br><em style="color:#38C4E8">Plumbing Companies</em></h3>
-          <p class="ind-body">When a pipe bursts at midnight, people don't shop around — they call whoever looks most trustworthy. Your website should make that decision easy for them.</p>
+          <h3 class="ind-h3">Plumbing<br><em style="color:#38C4E8">Websites</em></h3>
+          <p class="ind-body">Plumbing emergencies don't wait for business hours. The person with a burst pipe at midnight picks the first plumber who looks like they know what they're doing. That first impression lives on your website.</p>
           <ul class="ind-features">
-            <li>Emergency call button pinned on mobile</li>
-            <li>Licensing, insurance & warranty trust signals</li>
-            <li>Same-day booking with automated confirmations</li>
+            <li>Tap-to-call pinned on mobile so it's always one tap away</li>
+            <li>License number, insurance, and warranty shown clearly — not hidden in the footer</li>
+            <li>Booking form that confirms automatically so you're not playing phone tag</li>
           </ul>
-          <button class="btn-fill" style="background:#1A9EC0" onclick="scrollToEl('#cta')">Get My Plumbing Demo →</button>
+          <button class="btn-fill" style="background:#1A9EC0" onclick="scrollToEl('#cta')">Request a Free Plumbing Demo →</button>
         </div>
         <div class="browser-wrap">
           <div class="browser-bar">
@@ -386,11 +341,11 @@
               <div class="b-hl">Burst Pipe? Blocked Drain?<br>We're On Our Way.</div>
               <div class="b-sub">Same-day emergency plumbing. We fix it right the first time, guaranteed.</div>
               <div class="b-actions">
-                <div class="b-btn-p" style="background:#1a6fa8;color:#fff">📞 (602) 317-5588</div>
+                <div class="b-btn-p" style="background:#1a6fa8;color:#fff">📞 Call Now</div>
                 <div class="b-btn-s">Book Online</div>
               </div>
             </div>
-            <div class="b-rating">★★★★★ <span>4.9 · 341 Google reviews</span></div>
+            <div class="b-rating">★★★★★ <span>4.9 · 250+ Google reviews</span></div>
           </div>
           <div class="browser-footer">
             <div class="b-stat">🚨 <strong>24/7</strong>&nbsp;Emergency</div>
@@ -405,15 +360,14 @@
     <div class="ind-panel" id="p-other">
       <div class="ind-layout">
         <div>
-          <div class="ind-kicker">··· Service Businesses</div>
-          <h3 class="ind-h3">Built for<br><em>Your Trade</em></h3>
-          <p class="ind-body">Roofers, electricians, pool services — whatever you do, your customers are searching online right now. Your website should be the one that earns their call.</p>
+          <h3 class="ind-h3">Any Trade.<br><em>Same Approach.</em></h3>
+          <p class="ind-body">Roofers, electricians, pool services — the same problem shows up across every trade. Good work, bad website. The fix is the same too: a site that explains what you do, where you do it, and how to book you.</p>
           <ul class="ind-features">
-            <li>Industry-specific messaging & imagery</li>
-            <li>Lead capture forms built to convert</li>
-            <li>Mobile-first design for local search</li>
+            <li>Copy written for your trade — not swapped in from a template</li>
+            <li>Contact form that asks the right questions for your type of job</li>
+            <li>Built to show up in local searches for your city and service area</li>
           </ul>
-          <button class="btn-fill" onclick="scrollToEl('#cta')">Get My Custom Demo →</button>
+          <button class="btn-fill" onclick="scrollToEl('#cta')">Request a Free Demo for Your Trade →</button>
         </div>
         <div class="browser-wrap">
           <div class="browser-bar">
@@ -438,11 +392,11 @@
               <div class="b-hl">Nashville's Most<br>Trusted Electrician.</div>
               <div class="b-sub">Panel upgrades, rewiring, EV chargers & more. Same-week availability, upfront quotes.</div>
               <div class="b-actions">
-                <div class="b-btn-p" style="background:#5b21b6;color:#fff">📞 (615) 802-4490</div>
+                <div class="b-btn-p" style="background:#5b21b6;color:#fff">📞 Call Now</div>
                 <div class="b-btn-s">Get a Free Quote</div>
               </div>
             </div>
-            <div class="b-rating">★★★★★ <span>4.9 · 218 Google reviews</span></div>
+            <div class="b-rating">★★★★★ <span>4.9 · 100+ Google reviews</span></div>
           </div>
           <div class="browser-footer">
             <div class="b-stat">⚡ <strong>Master</strong>&nbsp;Licensed</div>
@@ -464,53 +418,32 @@
   <div class="w">
     <div class="section-header reveal">
       <div>
-        <div class="section-kicker">03 — Simple Process</div>
-        <h2 class="section-h2">From First Call to<br><em>Live Website</em></h2>
+        <div class="section-kicker">How it works</div>
+        <h2 class="section-h2">14 Days.<br><em>Here's What That Looks Like.</em></h2>
       </div>
-      <p style="font-size:16px;color:var(--dim);line-height:1.75;max-width:340px">Three steps. Zero stress. Your site goes live in 14 days — or we work for free.</p>
+      <p style="font-size:16px;color:var(--dim);line-height:1.75;max-width:340px">Three steps. Your site goes live in 14 days — or you don't pay the second half.</p>
     </div>
     <div class="process-grid">
       <div class="process-step reveal">
         <div class="process-step-num">01</div>
-        <div class="process-icon">📋</div>
-        <div class="process-title">Discovery Call</div>
-        <div class="process-desc">30 minutes. We learn your business, your customers, your goals. No pitch, no pressure — just a conversation that shapes everything.</div>
-        <div class="process-badge">⚡ Day 1</div>
+        <div class="process-title">We talk for 30 minutes</div>
+        <div class="process-desc">I ask about your trade, your service area, the jobs you want more of, and the ones you don't. That conversation is what everything else gets built from.</div>
+        <div class="process-badge">Day 1</div>
       </div>
       <div class="process-step reveal d1">
         <div class="process-step-num">02</div>
-        <div class="process-icon">🎨</div>
-        <div class="process-title">We Build It</div>
-        <div class="process-desc">Custom design, built for your trade, optimised to convert. Industry-specific copy, layout, and lead capture — done for you, from scratch.</div>
-        <div class="process-badge">⚡ Days 2–13</div>
+        <div class="process-title">I build your site</div>
+        <div class="process-desc">Custom design, written specifically for your trade and your city. Not a template with your name swapped in. I write the copy, build the layout, and set up the lead capture.</div>
+        <div class="process-badge">Days 2–13</div>
       </div>
       <div class="process-step reveal d2">
         <div class="process-step-num">03</div>
-        <div class="process-icon">🚀</div>
-        <div class="process-title">Go Live. Get Leads.</div>
-        <div class="process-desc">You approve. We launch. Your site captures leads 24/7 while you focus on the work — no missed calls, no lost jobs.</div>
-        <div class="process-badge">⚡ Day 14</div>
+        <div class="process-title">You approve. It goes live.</div>
+        <div class="process-desc">You review it, request any changes, and sign off. I launch on day 14. The site starts taking inquiries the same day.</div>
+        <div class="process-badge">Day 14</div>
       </div>
     </div>
 
-    <div class="results-grid" style="margin-top:60px">
-      <div class="result-item reveal">
-        <span class="result-num" data-count="200" data-suffix="+">200+</span>
-        <div class="result-label">Sites built for service businesses</div>
-      </div>
-      <div class="result-item reveal d1">
-        <span class="result-num" data-count="37" data-suffix="%">37%</span>
-        <div class="result-label">Average increase in lead volume</div>
-      </div>
-      <div class="result-item reveal d2">
-        <span class="result-num" data-count="14" data-suffix=" days">14 days</span>
-        <div class="result-label">Contract to live site</div>
-      </div>
-      <div class="result-item reveal d3">
-        <span class="result-num" data-count="98" data-suffix="%">98%</span>
-        <div class="result-label">Client satisfaction rate</div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -521,22 +454,21 @@
   <div class="w">
     <div class="about-inner reveal">
       <div class="about-left">
-        <div class="section-kicker">04 — Who's Behind This</div>
-        <h2 class="section-h2">Not an Agency.<br><em>A Builder.</em></h2>
+        <div class="section-kicker">Who builds your site</div>
+        <h2 class="section-h2">Just me.<br><em>Clay.</em></h2>
         <div class="about-visual">
           <div class="about-avatar">Cl</div>
           <div class="about-tags">
-            <span class="about-tag">Computer Science</span>
-            <span class="about-tag">Cybersecurity</span>
-            <span class="about-tag">Automation</span>
-            <span class="about-tag">Lead Systems</span>
+            <span class="about-tag">CS degree</span>
+            <span class="about-tag">Cybersecurity background</span>
+            <span class="about-tag">Based in the US</span>
           </div>
         </div>
       </div>
       <div class="about-right">
-        <p class="about-p">I'm Clay. My background is in computer science, cybersecurity, and automation — but I've never been interested in building things just to say I built them.</p>
-        <p class="about-p">I focus on service businesses because the gap is obvious. These are people who are great at what they do — HVAC, plumbing, landscaping — but their online presence doesn't reflect that. Leads slip through. Calls go unanswered. Their website works against them.</p>
-        <p class="about-p">Klaido exists to fix that. Not with templates and generic copy, but with systems — websites built to handle leads, respond fast, and turn interest into booked jobs. Things that work in the background while you're on the job.</p>
+        <p class="about-p">I'm Clay. Computer science background, some time in cybersecurity — but what I actually care about is building things that do something useful.</p>
+        <p class="about-p">I started working with contractors because the problem was so obvious. Great tradespeople with embarrassing websites, losing jobs to competitors who were worse at the actual work but easier to find online. That bothered me.</p>
+        <p class="about-p">Klaido is just me. I take on a small number of clients at a time, build every site myself, and write copy specific to your trade and your city. No account managers. No hand-offs. You deal with the person who built your site.</p>
         <div class="about-sig">
           <div class="about-sig-name">Clay</div>
           <div class="about-sig-title">Founder, Klaido Solutions</div>
@@ -551,13 +483,13 @@
 ───────────────────────────────────────────── -->
 <section id="testimonials">
   <div class="w">
-    <div class="section-kicker reveal" style="margin-bottom:60px">05 — Real Results</div>
+    <div class="section-kicker reveal" style="margin-bottom:60px">What clients say</div>
 
     <div class="testi-feature reveal">
       <div class="testi-feature-quote">"</div>
-      <blockquote class="testi-feature-text">Within 3 weeks of launching, our phone was ringing off the hook. We booked 14 new HVAC installs in the first month alone.</blockquote>
+      <blockquote class="testi-feature-text">Honestly wasn't sure what to expect. We'd had a website for years that did nothing. Within the first month we had 14 new installs booked through it. I wish I'd done this two years ago.</blockquote>
       <div class="testi-feature-author">
-        <div class="testi-feature-avatar">❄️</div>
+        <div class="testi-feature-avatar">MT</div>
         <div>
           <cite class="testi-feature-name">Marcus T.</cite>
           <div class="testi-feature-role">Owner, HVAC Company — Austin, TX</div>
@@ -569,9 +501,9 @@
     <div class="testi-two-col">
       <div class="testi-small reveal">
         <div class="testi-stars">★★★★★</div>
-        <p>"I'd been burned by web agencies before. Klaido delivered in 12 days. Quote requests tripled. The ROI paid for itself in week one."</p>
+        <p>"I've paid agencies twice as much for half the result. Clay actually asked questions about my business before building anything. Quote requests tripled inside a month."</p>
         <div class="testi-small-author">
-          <span class="testi-small-avatar">🌿</span>
+          <span class="testi-small-avatar">SW</span>
           <div>
             <div class="testi-small-name">Sarah W.</div>
             <div class="testi-small-role">Owner, Landscaping Co. — Denver, CO</div>
@@ -580,9 +512,9 @@
       </div>
       <div class="testi-small reveal d1">
         <div class="testi-stars">★★★★★</div>
-        <p>"We had a site before Klaido. It was embarrassing. Emergency calls went up 40% in 30 days. No joke."</p>
+        <p>"Our old site looked like it was built in 2009 because it was. Emergency calls are up and I can actually tell people to look us up without cringing."</p>
         <div class="testi-small-author">
-          <span class="testi-small-avatar">🔧</span>
+          <span class="testi-small-avatar">DM</span>
           <div>
             <div class="testi-small-name">Dave M.</div>
             <div class="testi-small-role">Founder, Plumbing Co. — Phoenix, AZ</div>
@@ -599,19 +531,19 @@
 <section id="guarantee">
   <div class="w">
     <div class="guarantee-inner reveal">
-      <div class="guarantee-badge">
-        <div class="guarantee-badge-big">50</div>
-        <div class="guarantee-badge-small">%<br>To Start</div>
+      <div class="guarantee-badge" aria-hidden="true">
+        <div style="font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--dim);text-transform:uppercase;margin-bottom:8px">Payment structure</div>
+        <div style="font-family:var(--serif);font-size:48px;line-height:1;color:var(--white)">$0</div>
+        <div style="font-size:13px;color:var(--dim);margin-top:6px">to see the demo</div>
       </div>
       <div class="guarantee-text">
-        <h3>You See It <em>Before You Commit.</em></h3>
-        <p>We build your demo first, free. If you want to move forward, we start with a 50% deposit. The remaining 50% is due when you approve the final site.</p>
-        <div class="guarantee-pills">
-          <div class="gpill">✓ Free Demo First</div>
-          <div class="gpill">✓ 50% To Start</div>
-          <div class="gpill">✓ 50% On Approval</div>
-          <div class="gpill">✓ 14-Day Delivery</div>
-        </div>
+        <h3>See it first. <em>Pay after.</em></h3>
+        <p>I build your demo before any money changes hands. If you like it and want to move forward: 50% to start, 50% when you approve the final site. If you don't want to proceed, you owe nothing.</p>
+        <ul style="margin-top:20px;display:flex;flex-direction:column;gap:10px;list-style:none">
+          <li style="font-size:14px;color:var(--dim)">Demo built and sent before any payment</li>
+          <li style="font-size:14px;color:var(--dim)">50% deposit to start, 50% when you approve the final site</li>
+          <li style="font-size:14px;color:var(--dim)">If I miss 14 days on my end — second payment is waived until it's done</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -624,30 +556,30 @@
   <div class="w">
     <div class="section-header reveal">
       <div>
-        <div class="section-kicker">06 — Questions Answered</div>
-        <h2 class="section-h2">Everything You<br><em>Need to Know</em></h2>
+        <div class="section-kicker">FAQ</div>
+        <h2 class="section-h2">Questions I<br><em>Get Every Time</em></h2>
       </div>
     </div>
     <div class="faq-wrap">
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How long does it actually take?<div class="faq-icon" aria-hidden="true">+</div></button>
-        <div class="faq-a"><div class="faq-a-inner">14 days from the moment you sign. Day 1 is a discovery call. Days 2–13 are design and development. Day 14 is your live launch. If we go over 14 days for any reason on our end, you pay nothing until we deliver.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">14 days from deposit. Day 1 is a 30-minute call. Days 2–13 I build. Day 14 I launch. If I miss the deadline for any reason on my end, the second payment gets waived until it's done.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What if I already have a website?<div class="faq-icon" aria-hidden="true">+</div></button>
-        <div class="faq-a"><div class="faq-a-inner">Perfect. Most of our clients come to us with an existing site that isn't converting. We analyze what's failing, build a completely new site from scratch, and migrate everything over. Your old site stays live until the new one is ready.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Most clients come to me with an existing site. I'll look at it before our call, tell you what's actually costing you leads, and build something better from scratch. Your old site stays live the whole time.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What does it cost?<div class="faq-icon" aria-hidden="true">+</div></button>
-        <div class="faq-a"><div class="faq-a-inner">Every project is scoped individually based on your business size and goals. We start with a free demo so you can see exactly what you'd get before spending a cent. Most service businesses invest between $1,500–$4,000 for a complete site build.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Every project is quoted individually. Most site builds land between $1,500–$4,000 depending on scope. The demo is free — you'll see exactly what you're getting before any money changes hands.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Do I need to know anything about websites?<div class="faq-icon" aria-hidden="true">+</div></button>
-        <div class="faq-a"><div class="faq-a-inner">Zero tech knowledge required. We handle everything — design, development, copywriting, and launch. All you need to do is answer a few questions about your business. We do the rest.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">None. You answer questions about your business, I handle everything else. Design, copy, build, launch. The only thing you need to do is show up to the 30-minute call.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What happens after the site launches?<div class="faq-icon" aria-hidden="true">+</div></button>
-        <div class="faq-a"><div class="faq-a-inner">We don't disappear. Every site comes with 30 days of post-launch support included. Need to update services, prices, or photos? We handle it. Your site grows as your business grows.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">30 days of post-launch support is included. Need to change your service area, update pricing, swap a photo? I handle it. After that, ongoing changes are available at a flat monthly rate if you want it.</div></div>
       </div>
     </div>
   </div>
@@ -660,9 +592,9 @@
   <div class="w">
     <div class="cta-inner reveal">
       <div class="cta-left">
-        <div class="section-kicker">07 — Get Started Free</div>
-        <h2 class="cta-h2">See What Your<br>Website <em>Could Be</em></h2>
-        <p class="cta-body">We'll build you a free personalised demo — designed around your trade, your area, your customers. No commitment. No pitch. Just a look at what's possible.</p>
+        <div class="section-kicker">Get a free demo</div>
+        <h2 class="cta-h2">Request a<br><em>Free Demo</em></h2>
+        <p class="cta-body">Fill this in and I'll build you a free demo — designed around your specific trade and city. You look at it, decide if you want to move forward. No sales call. No pressure.</p>
         <div id="lead-form-wrap">
           <form class="lead-form" onsubmit="submitLead(event)" novalidate>
             <div class="lead-row">
@@ -671,37 +603,31 @@
             </div>
             <input class="lead-input" type="tel" placeholder="Phone number" autocomplete="tel" aria-label="Phone number" required>
             <input class="lead-input" type="text" placeholder="Business type (e.g. HVAC, Plumbing...)" autocomplete="organization" aria-label="Business type" required>
-            <button class="btn-fill" type="submit" style="font-size:15px;padding:16px 36px;width:100%;justify-content:center">Show Me What's Possible →</button>
+            <button class="btn-fill" type="submit" style="font-size:15px;padding:16px 36px;width:100%;justify-content:center">Request My Free Demo →</button>
           </form>
-          <div class="cta-small" style="margin-top:12px">Takes 60 seconds · No credit card · 100% free</div>
+          <div class="cta-small" style="margin-top:12px">Free. No card. I'll email you the demo directly.</div>
         </div>
         <div class="form-success" id="form-success">
-          <span class="form-success-icon">🎉</span>
-          <div class="form-success-h">Demo request received.</div>
-          <div class="form-success-p">We'll reach out within 24 hours with your custom site preview. Keep an eye on your inbox.</div>
+          <div class="form-success-h">Got it.</div>
+          <div class="form-success-p">I'll build your demo and send it over within 24 hours. Keep an eye on your inbox.</div>
         </div>
       </div>
       <div class="cta-right">
-        <div style="background:var(--card);border:1px solid rgba(75,110,255,.2);border-radius:24px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.6),0 0 60px rgba(75,110,255,.1);animation:float3d 8s ease-in-out infinite">
-          <div style="padding:20px 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px">
-            <div style="width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s ease-in-out infinite"></div>
-            <span style="font-size:12px;color:var(--dim)">Lead Dashboard — Live</span>
-            <span style="margin-left:auto;font-size:11px;font-weight:600;color:var(--green)">+37% this month</span>
+        <div class="cta-what-happens">
+          <div class="cwh-title">What happens after you submit</div>
+          <div class="cwh-step">
+            <div class="cwh-num">1</div>
+            <div class="cwh-text">I review your business type and location — usually within a few hours.</div>
           </div>
-          <div style="padding:24px">
-            <div style="font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px">Incoming leads today</div>
-            <div id="lead-ticker" style="display:flex;flex-direction:column;gap:10px"></div>
+          <div class="cwh-step">
+            <div class="cwh-num">2</div>
+            <div class="cwh-text">I build a real demo page — designed for your trade, your city, your customers. Not a wireframe. An actual site.</div>
           </div>
-          <div style="padding:16px 24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center">
-            <div>
-              <div style="font-family:var(--serif);font-size:36px;font-weight:400;line-height:1;background:linear-gradient(135deg,var(--white),var(--blue-s));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text" id="lead-total">12</div>
-              <div style="font-size:11px;color:var(--dim)">leads today</div>
-            </div>
-            <div style="text-align:right">
-              <div style="font-family:var(--serif);font-size:36px;font-weight:400;line-height:1;color:var(--green)">$4,200</div>
-              <div style="font-size:11px;color:var(--dim)">est. revenue</div>
-            </div>
+          <div class="cwh-step">
+            <div class="cwh-num">3</div>
+            <div class="cwh-text">I send it to you. You look at it. If you want to move forward, great. If not, no hard feelings.</div>
           </div>
+          <div class="cwh-note">No call required to see the demo. No pitch. Just a link.</div>
         </div>
       </div>
     </div>
@@ -716,7 +642,7 @@
     <div class="footer-cols">
       <div>
         <div class="footer-logo" style="margin-bottom:14px">Klaido <em>Solutions</em></div>
-        <div class="footer-copy" style="line-height:1.8;max-width:220px">High-converting websites for home service businesses. Built in 14 days. Guaranteed.</div>
+        <div class="footer-copy" style="line-height:1.8;max-width:220px">Websites for home service businesses. Built from scratch, in 14 days, by one person.</div>
       </div>
       <div>
         <div class="footer-heading">Services</div>
@@ -731,18 +657,15 @@
         <div class="footer-heading">Company</div>
         <div class="footer-links">
           <a href="#process" class="footer-link">How It Works</a>
-          <a href="#testimonials" class="footer-link">Results</a>
+          <a href="#testimonials" class="footer-link">Client Results</a>
           <a href="#faq" class="footer-link">FAQ</a>
           <a href="#cta" class="footer-link">Get a Demo</a>
         </div>
       </div>
     </div>
     <div class="footer-inner" style="padding:24px 0">
-      <div class="footer-copy">© 2026 Klaido Solutions. All rights reserved.</div>
-      <div style="display:flex;align-items:center;gap:8px">
-        <div class="live-dot" style="width:6px;height:6px"></div>
-        <span style="font-size:12px;color:var(--green)">All systems operational</span>
-      </div>
+      <div class="footer-copy">© 2026 Klaido Solutions</div>
+      <div style="font-size:12px;color:var(--dim)">Built by Clay — <a href="mailto:clay@klaido.com" style="color:var(--dim)">clay@klaido.com</a></div>
     </div>
   </div>
 </footer>
@@ -753,23 +676,20 @@
 <!-- Sticky bar -->
 <div id="sticky-bar">
   <div class="sticky-left">
-    <div class="sticky-pulse"></div>
-    <div class="sticky-copy"><strong>Klaido</strong> — websites that actually convert</div>
+    <div class="sticky-copy">I'll build your demo for free. You decide after you see it.</div>
   </div>
-  <div class="sticky-scarcity">Free demo · No commitment</div>
-  <button class="btn-fill" onclick="scrollToEl('#cta')" style="padding:10px 24px;font-size:13px">See What's Possible →</button>
+  <button class="btn-fill" onclick="scrollToEl('#cta')" style="padding:10px 24px;font-size:13px">Request a Free Demo →</button>
 </div>
 
 <!-- Exit intent modal -->
 <div id="exit-modal" role="dialog" aria-modal="true" aria-labelledby="exit-heading">
   <div class="exit-box">
     <button class="exit-close" onclick="closeExit()">✕</button>
-    <span class="exit-emoji">⚡</span>
-    <h2 class="exit-h" id="exit-heading">Wait — before you go.<br><em>This takes 30 seconds.</em></h2>
-    <p class="exit-p">Drop your email and we'll send you a personalised demo of what your website could look like. No calls. No spam. Just results.</p>
+    <h2 class="exit-h" id="exit-heading">Before you go —<br><em>see what I'd build for you.</em></h2>
+    <p class="exit-p">Leave your email. I'll build a free demo around your trade and send it over. No call required, no obligation.</p>
     <input class="exit-input" id="exit-email" type="email" placeholder="your@email.com" aria-label="Your email address">
-    <button class="btn-fill" style="width:100%;justify-content:center;padding:14px" onclick="submitExit()">Send Me The Free Demo →</button>
-    <button class="exit-skip" onclick="closeExit()">No thanks, I'm not interested</button>
+    <button class="btn-fill" style="width:100%;justify-content:center;padding:14px" onclick="submitExit()">Send Me the Free Demo →</button>
+    <button class="exit-skip" onclick="closeExit()">No thanks</button>
   </div>
 </div>
 

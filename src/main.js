@@ -111,19 +111,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
-/* ── Live visitor counter ── */
-(function() {
-  const el = document.getElementById('visitor-count');
-  if (!el) return;
-  let v = 18 + Math.floor(Math.random() * 12);
-  el.textContent = v;
-  setInterval(() => {
-    if (document.hidden) return;
-    v += Math.random() > 0.5 ? 1 : -1;
-    v = Math.max(12, Math.min(42, v));
-    el.textContent = v;
-  }, 4200);
-})();
 
 /* ── Focus trap utility ── */
 function trapFocus(container, onEscape) {
@@ -245,24 +232,12 @@ const countObs = new IntersectionObserver(entries => {
 }, {threshold: 0.5});
 document.querySelectorAll('[data-count]').forEach(el => countObs.observe(el));
 
-/* ── FOMO toast notifications ── */
-const toastContainer = document.getElementById('toast-container');
-const toastData = [
-  {emoji:'❄️', name:'Jordan K.', action:'just booked a free demo', time:'2 min ago'},
-  {emoji:'🌿', name:'Taylor R.', action:'launched their new site today', time:'5 min ago'},
-  {emoji:'🔧', name:'Alex B.', action:'got 14 new leads this week', time:'8 min ago'},
-  {emoji:'🏠', name:'James R.', action:'just requested a custom demo', time:'11 min ago'},
-  {emoji:'⚡', name:'Priya K.', action:'increased conversions by 40%', time:'14 min ago'},
-  {emoji:'🌿', name:'Tom H.', action:'is viewing the landscaping demo', time:'Just now'},
-];
-let toastIdx = 0;
-
-function showToast(override) {
-  const data = override || toastData[toastIdx % toastData.length];
-  toastIdx++;
+function showToast(data) {
+  const toastContainer = document.getElementById('toast-container');
+  if (!toastContainer || !data) return;
   const el = document.createElement('div');
   el.className = 'toast';
-  el.innerHTML = `<div class="toast-avatar">${data.emoji}</div><div class="toast-body"><div class="toast-name">${data.name}</div><div class="toast-action">${data.action}</div></div><div class="toast-time">${data.time}</div>`;
+  el.innerHTML = `<div class="toast-body"><div class="toast-name">${data.name}</div><div class="toast-action">${data.action}</div></div>`;
   toastContainer.appendChild(el);
   requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('show')));
   setTimeout(() => {
@@ -270,8 +245,6 @@ function showToast(override) {
     setTimeout(() => el.remove(), 700);
   }, 4500);
 }
-
-setTimeout(() => { showToast(); setInterval(showToast, 8000); }, 4000);
 
 /* ── FAQ accordion ── */
 function toggleFaq(btn) {
@@ -319,7 +292,6 @@ function submitExit() {
   const email = document.getElementById('exit-email').value.trim();
   if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     closeExit();
-    setTimeout(() => showToast({emoji:'🎉', name:'Got it!', action:'Demo request received', time:'Just now'}), 600);
   } else {
     document.getElementById('exit-email').style.borderColor = 'rgba(255,80,80,.6)';
   }
@@ -344,7 +316,6 @@ function submitLead(e) {
   if (!valid) return;
   document.getElementById('lead-form-wrap').style.display = 'none';
   document.getElementById('form-success').style.display = 'block';
-  showToast({emoji:'🎉', name:'New demo request!', action:'We\'ll be in touch within 24h', time:'Just now'});
 }
 
 /* ── Magnetic button effect ── */
@@ -358,40 +329,6 @@ document.querySelectorAll('.btn-fill, .btn-ghost, .nav-cta').forEach(btn => {
   btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
 });
 
-/* ── Live lead ticker in CTA ── */
-(function() {
-  const container = document.getElementById('lead-ticker');
-  if (!container) return;
-  const leads = [
-    {name:'Mike R.', type:'HVAC Repair', time:'2 min ago', icon:'❄️'},
-    {name:'Jamie L.', type:'Landscaping Quote', time:'11 min ago', icon:'🌿'},
-    {name:'Tanya B.', type:'Emergency Plumbing', time:'18 min ago', icon:'🔧'},
-    {name:'Sam K.', type:'Roof Inspection', time:'34 min ago', icon:'🏠'},
-    {name:'Chris W.', type:'Pool Service', time:'41 min ago', icon:'🌊'},
-    {name:'Dana P.', type:'Pest Control', time:'55 min ago', icon:'🐛'},
-  ];
-  let shown = 3;
-  function render() {
-    container.innerHTML = '';
-    leads.slice(0, shown).forEach(l => {
-      const row = document.createElement('div');
-      row.className = 'lead-item';
-      row.innerHTML = `<span style="font-size:18px">${l.icon}</span><div style="flex:1"><div style="font-size:13px;font-weight:500">${l.name}</div><div style="font-size:11px;color:var(--dim)">${l.type}</div></div><div style="font-size:10px;color:var(--dimmer);white-space:nowrap">${l.time}</div>`;
-      container.appendChild(row);
-    });
-  }
-  render();
-  setInterval(() => {
-    if (document.hidden) return;
-    const idx = shown % leads.length;
-    const next = { ...leads[idx], time: 'Just now' };
-    leads.unshift(next);
-    leads.splice(shown + 1, 1);
-    const total = parseInt(document.getElementById('lead-total').textContent) || 0;
-    document.getElementById('lead-total').textContent = total + 1;
-    render();
-  }, 6500);
-})();
 
 /* ── GSAP hero parallax on scroll ── */
 gsap.to('.hero-left', {
