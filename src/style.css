@@ -1203,7 +1203,7 @@ footer{
 ───────────────────────────────────────────── */
 #mobile-cta{
   display:none;
-  position:fixed;bottom:20px;right:20px;z-index:7500;
+  position:fixed;bottom:80px;right:20px;z-index:7500;
   width:56px;height:56px;border-radius:50%;
   background:var(--blue);
   box-shadow:0 8px 32px rgba(75,110,255,.5),0 0 0 0 rgba(75,110,255,.4);
@@ -1386,8 +1386,8 @@ footer{
   .faq-q{font-size:15px;padding:22px 0}
   .faq-a{font-size:14px}
 
-  /* CTA section */
-  #cta{padding:80px 0 60px}
+  /* CTA section — extra bottom padding so sticky bar doesn't cover the form button */
+  #cta{padding:80px 0 120px}
   .cta-h2{font-size:clamp(28px,7vw,44px)}
   .cta-sub{font-size:15px}
 
