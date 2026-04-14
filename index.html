@@ -3,26 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Klaido Solutions — Websites for Home Service Businesses</title>
-<meta name="description" content="Klaido builds websites for HVAC, plumbing, landscaping, and other home service contractors. Free demo first. Live in 14 days.">
+<title>Klaido — Turn Missed Calls Into Booked Jobs Automatically</title>
+<meta name="description" content="Missed call automation for service businesses. When you can't answer, the system texts back in seconds, qualifies the caller, and books the appointment.">
 <meta name="theme-color" content="#050507">
 <link rel="canonical" href="https://klaido.com/">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://klaido.com/">
-<meta property="og:title" content="Klaido Solutions — Websites for Home Service Businesses">
-<meta property="og:description" content="Websites for HVAC, plumbing, landscaping, and other home service contractors. Free demo built before you commit. Live in 14 days.">
+<meta property="og:title" content="Klaido — Turn Missed Calls Into Booked Jobs Automatically">
+<meta property="og:description" content="Missed call automation for service businesses. Stop losing jobs when you can't answer the phone.">
 <meta property="og:image" content="https://klaido.com/og-image.jpg">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Klaido Solutions — Websites for Home Service Businesses">
-<meta name="twitter:description" content="Websites for HVAC, plumbing, landscaping, and other home service contractors. Free demo built before you commit. Live in 14 days.">
+<meta name="twitter:title" content="Klaido — Turn Missed Calls Into Booked Jobs Automatically">
+<meta name="twitter:description" content="Missed call automation for service businesses. Stop losing jobs when you can't answer the phone.">
 <meta name="twitter:image" content="https://klaido.com/og-image.jpg">
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" as="style">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha384-d+vyQ0dYcymoP8ndq2hW7FGC50nqGdXUEgoOUGxbbkAJwZqL7h+jKN0GGgn9hFDS" crossorigin="anonymous" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha384-poC0r6usQOX2Ayt/VGA+t81H6V3iN9L+Irz9iO8o+s0X20tLpzc9DOOtnKxhaQSE" crossorigin="anonymous" defer></script>
 <link rel="stylesheet" href="/src/style.css">
@@ -36,31 +32,29 @@
 <div id="grain" aria-hidden="true"></div>
 <!-- Toast container -->
 <div id="toast-container" aria-live="polite"></div>
-<!-- Cursor -->
-<div id="cur" aria-hidden="true"></div>
 
 <!-- ─────────────────────────────────────────────
      NAV
 ───────────────────────────────────────────── -->
 <nav id="nav" aria-label="Main navigation">
-  <a href="#" class="nav-logo">Klaido <em>Solutions</em></a>
+  <a href="#" class="nav-logo">Klaido</a>
   <ul class="nav-links">
-    <li><a href="#process">How It Works</a></li>
-    <li><a href="#testimonials">Results</a></li>
+    <li><a href="#demo">See Demo</a></li>
+    <li><a href="#how-it-works">How It Works</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
-  <button class="nav-cta" onclick="scrollToEl('#cta')">Free Demo →</button>
+  <button class="nav-cta" onclick="scrollToEl('#cta')">Book a Call →</button>
   <button id="nav-ham" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- Mobile nav -->
 <div id="mobile-nav" aria-hidden="true">
-  <a href="#process" onclick="toggleMobileNav()">How It Works</a>
-  <a href="#testimonials" onclick="toggleMobileNav()">Results</a>
+  <a href="#demo" onclick="toggleMobileNav()">See Demo</a>
+  <a href="#how-it-works" onclick="toggleMobileNav()">How It Works</a>
   <a href="#about" onclick="toggleMobileNav()">About</a>
   <a href="#faq" onclick="toggleMobileNav()">FAQ</a>
-  <button class="btn-fill" onclick="toggleMobileNav();requestAnimationFrame(()=>scrollToEl('#cta'))" style="font-size:16px;padding:16px 40px">Request a Free Demo</button>
+  <button class="btn-fill" onclick="toggleMobileNav();requestAnimationFrame(()=>scrollToEl('#cta'))" style="font-size:16px;padding:16px 40px">Book a Call</button>
 </div>
 
 <main id="main">
@@ -77,31 +71,31 @@
 
       <!-- Left -->
       <div class="hero-left reveal">
-        <div class="hero-index">Websites for Home Service Contractors</div>
+        <div class="hero-index">Missed call automation for service businesses</div>
 
         <h1 class="hero-h1">
-          Your Work Is Great.<br>
-          <span class="line2">Your Website Should<br>
-          <em>Prove It.</em></span>
+          Turn Missed Calls<br>
+          <span class="line2">Into Booked Jobs<br>
+          <em>Automatically.</em></span>
         </h1>
 
         <p class="hero-sub">
-          Most contractors get jobs through referrals — until a slow month hits and the phone goes quiet. I build websites that keep leads coming in whether referrals are or not.
+          When you can't answer the phone, this system texts back in seconds, qualifies the caller, and books the appointment. Most jobs go to whoever responds first.
         </p>
 
         <div class="hero-actions">
-          <button class="btn-fill" onclick="scrollToEl('#cta')">See What I'd Build for You →</button>
-          <button class="btn-ghost" onclick="scrollToEl('#process')">How it works</button>
+          <button class="btn-fill" onclick="scrollToEl('#demo')">Watch the Demo →</button>
+          <button class="btn-ghost" onclick="scrollToEl('#cta')">Book a Call</button>
         </div>
 
       </div>
 
-      <!-- Right: missed call card -->
+      <!-- Right: call flow card -->
       <div class="hero-right">
         <div class="hero-card">
           <div class="hero-card-top">
             <div class="hero-card-dot"></div>
-            <span class="hero-card-label">What your site does at 11pm</span>
+            <span class="hero-card-label">What happens when you miss a call</span>
           </div>
 
           <div class="hero-card-body">
@@ -119,10 +113,10 @@
             <div class="hero-card-event hero-card-event--captured card-step" id="card-step-3">
               <div class="hero-card-icon hero-card-icon--captured"></div>
               <div>
-                <div class="hero-card-event-title">Contact form submitted</div>
-                <div class="hero-card-event-sub">Name · Phone · Service needed</div>
+                <div class="hero-card-event-title">Auto-text sent in 45 sec</div>
+                <div class="hero-card-event-sub">"Hey, I just missed your call — how can I help?"</div>
               </div>
-              <div class="hero-card-tag hero-card-tag--captured">Captured</div>
+              <div class="hero-card-tag hero-card-tag--captured">Replied</div>
             </div>
 
             <div class="hero-card-arrow card-step" id="card-step-4">↓</div>
@@ -131,7 +125,7 @@
               <div class="hero-card-icon hero-card-icon--booked"></div>
               <div>
                 <div class="hero-card-event-title">Appointment booked</div>
-                <div class="hero-card-event-sub">Tomorrow, 9:00 AM · $380 job</div>
+                <div class="hero-card-event-sub">Tomorrow, 9:00 AM · AC repair</div>
               </div>
               <div class="hero-card-tag hero-card-tag--booked">Booked</div>
             </div>
@@ -149,303 +143,149 @@
   <!-- Trust strip -->
   <div class="hero-strip">
     <div class="strip-stat">
-      <div class="strip-num">14</div>
-      <div class="strip-label">Days from deposit to live site, guaranteed</div>
+      <div class="strip-num">60s</div>
+      <div class="strip-label">Average response time after a missed call</div>
     </div>
     <div class="strip-stat">
       <div class="strip-num">$0</div>
-      <div class="strip-label">Due until you've seen your demo and said yes</div>
+      <div class="strip-label">Cost to start — 14-day free trial, no card needed</div>
     </div>
     <div class="strip-stat">
-      <div class="strip-num">1</div>
-      <div class="strip-label">Person building your site — not a team of interns</div>
+      <div class="strip-num">24/7</div>
+      <div class="strip-label">Runs while you're on the job or asleep</div>
     </div>
   </div>
 </section>
 
 <!-- ─────────────────────────────────────────────
-     MARQUEE
+     TRADES STRIP
 ───────────────────────────────────────────── -->
 <div class="marquee-wrap">
   <div style="text-align:center;font-size:13px;letter-spacing:.08em;color:var(--dim);text-transform:uppercase;padding:18px 24px">
-    HVAC &nbsp;·&nbsp; Plumbing &nbsp;·&nbsp; Landscaping &nbsp;·&nbsp; Roofing &nbsp;·&nbsp; Electrical &nbsp;·&nbsp; Pool Service &nbsp;·&nbsp; Pest Control &nbsp;·&nbsp; Any Trade
+    HVAC &nbsp;·&nbsp; Plumbing &nbsp;·&nbsp; Landscaping &nbsp;·&nbsp; Roofing &nbsp;·&nbsp; Electrical &nbsp;·&nbsp; Pool Service &nbsp;·&nbsp; Bounce Houses &nbsp;·&nbsp; Any Service Trade
   </div>
 </div>
 
 
 <!-- ─────────────────────────────────────────────
-     INDUSTRY CONTENT SECTION
+     PROBLEM
 ───────────────────────────────────────────── -->
-<section id="industry">
+<section id="problem">
   <div class="w">
-
     <div class="section-header reveal">
       <div>
-        <div class="section-kicker">Pick your trade</div>
-        <h2 class="section-h2">
-          What I'd Build<br>
-          for <em id="sectionLabel">Your Trade</em>
-        </h2>
+        <div class="section-kicker">The problem</div>
+        <h2 class="section-h2">You're losing jobs<br><em>you don't know about.</em></h2>
+      </div>
+      <p style="font-size:16px;color:var(--dim);line-height:1.75;max-width:340px">Every missed call is a potential job. Most callers don't leave voicemails — they hang up and call the next business on the list.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <div class="process-step-num">01</div>
+        <div class="process-title">You miss the call</div>
+        <div class="process-desc">You're on a job, under a sink, on the roof, or just can't get to your phone. The call goes unanswered.</div>
+      </div>
+      <div class="process-step reveal d1">
+        <div class="process-step-num">02</div>
+        <div class="process-title">They don't leave a message</div>
+        <div class="process-desc">Most people don't bother with voicemail anymore. They hang up and search for the next option on the list.</div>
+      </div>
+      <div class="process-step reveal d2">
+        <div class="process-step-num">03</div>
+        <div class="process-title">Your competitor answers</div>
+        <div class="process-desc">The caller finds someone else, books the job, and you never knew there was a lead in the first place.</div>
       </div>
     </div>
-
-    <!-- Trade picker -->
-    <div class="trade-picker reveal">
-      <button class="trade-btn" data-ind="hvac" onclick="selectInd('hvac')">HVAC</button>
-      <button class="trade-btn" data-ind="land" onclick="selectInd('land')">Landscaping</button>
-      <button class="trade-btn" data-ind="plumb" onclick="selectInd('plumb')">Plumbing</button>
-      <button class="trade-btn" data-ind="other" onclick="selectInd('other')">Other Trade</button>
-    </div>
-
-    <!-- No-selection state -->
-    <div class="no-sel reveal" id="noSel">
-      <div class="ns-big">Select a trade above.</div>
-      <p>I'll show you what I'd actually build for that type of business.</p>
-    </div>
-
-    <!-- HVAC -->
-    <div class="ind-panel" id="p-hvac">
-      <div class="ind-layout">
-        <div>
-          <h3 class="ind-h3">HVAC<br><em>Websites</em></h3>
-          <p class="ind-body">AC goes out at 10pm on a Friday. The homeowner searches, finds the first site that looks credible, and calls. That site should be yours.</p>
-          <ul class="ind-features">
-            <li>Call button front and center — not buried in the footer</li>
-            <li>Financing options shown upfront so price objections disappear earlier</li>
-            <li>Your Google reviews pulled in automatically</li>
-          </ul>
-          <button class="btn-fill" style="background:var(--blue)" onclick="scrollToEl('#cta')">Request a Free HVAC Demo →</button>
-        </div>
-        <div class="browser-wrap">
-          <div class="browser-bar">
-            <div class="b-dot" style="background:#ff5f57"></div>
-            <div class="b-dot" style="background:#ffbd2e"></div>
-            <div class="b-dot" style="background:#28c840"></div>
-            <div class="b-url">frostflowac.com</div>
-          </div>
-          <div class="browser-hero" style="background:linear-gradient(135deg,#0f2027,#1a3a4a)">
-            <div class="browser-accent" style="background:#e85d2f"></div>
-            <div class="b-nav">
-              <div class="b-nav-logo">Riverside HVAC</div>
-              <div class="b-nav-links">
-                <span class="b-nav-link">Services</span>
-                <span class="b-nav-link">About</span>
-                <span class="b-nav-link">Financing</span>
-              </div>
-              <div class="b-nav-cta">📞 Call Now</div>
-            </div>
-            <div class="b-hero-content">
-              <div class="b-brand">Austin, TX · Licensed & Insured</div>
-              <div class="b-hl">AC Out? We'll Be<br>There in 60 Minutes.</div>
-              <div class="b-sub">Same-day HVAC repair & installation. Upfront pricing, no surprises.</div>
-              <div class="b-actions">
-                <div class="b-btn-p" style="background:#e85d2f;color:#fff">📞 Call Now</div>
-                <div class="b-btn-s">Get a Free Quote</div>
-              </div>
-            </div>
-            <div class="b-rating">★★★★★ <span>4.9 · 200+ Google reviews</span></div>
-          </div>
-          <div class="browser-footer">
-            <div class="b-stat">✅ <strong>Licensed</strong>&nbsp;& Insured</div>
-            <div class="b-stat">🕐 <strong>24/7</strong>&nbsp;Emergency</div>
-            <div class="b-stat">💰 Upfront Pricing</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Landscaping -->
-    <div class="ind-panel" id="p-land">
-      <div class="ind-layout">
-        <div>
-          <h3 class="ind-h3">Landscaping<br><em style="color:#3DCC8E">Websites</em></h3>
-          <p class="ind-body">Landscaping is visual work. If your website doesn't show it well, you're asking people to hire you on faith. Before/after photos, clear pricing, and a simple way to request a quote — that's what converts.</p>
-          <ul class="ind-features">
-            <li>Before/after gallery that loads fast and actually looks good on mobile</li>
-            <li>Seasonal promotions you can update yourself without touching code</li>
-            <li>Quote request form that asks enough to filter out tire-kickers</li>
-          </ul>
-          <button class="btn-fill" style="background:#2BA56D" onclick="scrollToEl('#cta')">Request a Free Landscaping Demo →</button>
-        </div>
-        <div class="browser-wrap">
-          <div class="browser-bar">
-            <div class="b-dot" style="background:#ff5f57"></div>
-            <div class="b-dot" style="background:#ffbd2e"></div>
-            <div class="b-dot" style="background:#28c840"></div>
-            <div class="b-url">greenscapepros.com</div>
-          </div>
-          <div class="browser-hero" style="background:linear-gradient(135deg,#1a2e1a,#2d4a2d)">
-            <div class="browser-accent" style="background:#3DCC8E"></div>
-            <div class="b-nav">
-              <div class="b-nav-logo">Oakwood Lawn</div>
-              <div class="b-nav-links">
-                <span class="b-nav-link">Services</span>
-                <span class="b-nav-link">Gallery</span>
-                <span class="b-nav-link">About</span>
-              </div>
-              <div class="b-nav-cta">Free Estimate</div>
-            </div>
-            <div class="b-hero-content">
-              <div class="b-brand">Denver, CO · Serving homeowners since 2014</div>
-              <div class="b-hl">Your Yard, Done Right.<br>Every Time.</div>
-              <div class="b-sub">Mowing, design, cleanups & seasonal services. Free estimates, no obligation.</div>
-              <div class="b-actions">
-                <div class="b-btn-p" style="background:#2d7a3a;color:#fff">📅 Book a Free Estimate</div>
-                <div class="b-btn-s">See Our Work</div>
-              </div>
-            </div>
-            <div class="b-rating">★★★★★ <span>4.8 · 150+ Google reviews</span></div>
-          </div>
-          <div class="browser-footer">
-            <div class="b-stat">🌿 <strong>Free</strong>&nbsp;Estimates</div>
-            <div class="b-stat">📸 Before & After Gallery</div>
-            <div class="b-stat">📍 Local & Insured</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Plumbing -->
-    <div class="ind-panel" id="p-plumb">
-      <div class="ind-layout">
-        <div>
-          <h3 class="ind-h3">Plumbing<br><em style="color:#38C4E8">Websites</em></h3>
-          <p class="ind-body">Plumbing emergencies don't wait for business hours. The person with a burst pipe at midnight picks the first plumber who looks like they know what they're doing. That first impression lives on your website.</p>
-          <ul class="ind-features">
-            <li>Tap-to-call pinned on mobile so it's always one tap away</li>
-            <li>License number, insurance, and warranty shown clearly — not hidden in the footer</li>
-            <li>Booking form that confirms automatically so you're not playing phone tag</li>
-          </ul>
-          <button class="btn-fill" style="background:#1A9EC0" onclick="scrollToEl('#cta')">Request a Free Plumbing Demo →</button>
-        </div>
-        <div class="browser-wrap">
-          <div class="browser-bar">
-            <div class="b-dot" style="background:#ff5f57"></div>
-            <div class="b-dot" style="background:#ffbd2e"></div>
-            <div class="b-dot" style="background:#28c840"></div>
-            <div class="b-url">flowrightplumbing.com</div>
-          </div>
-          <div class="browser-hero" style="background:linear-gradient(135deg,#0a1628,#0f2a4a)">
-            <div class="browser-accent" style="background:#38C4E8"></div>
-            <div class="b-nav">
-              <div class="b-nav-logo">ClearFlow Plumbing</div>
-              <div class="b-nav-links">
-                <span class="b-nav-link">Services</span>
-                <span class="b-nav-link">Reviews</span>
-                <span class="b-nav-link">About</span>
-              </div>
-              <div class="b-nav-cta">📞 Call Now</div>
-            </div>
-            <div class="b-hero-content">
-              <div class="b-brand">Phoenix, AZ · Licensed & Background-Checked</div>
-              <div class="b-hl">Burst Pipe? Blocked Drain?<br>We're On Our Way.</div>
-              <div class="b-sub">Same-day emergency plumbing. We fix it right the first time, guaranteed.</div>
-              <div class="b-actions">
-                <div class="b-btn-p" style="background:#1a6fa8;color:#fff">📞 Call Now</div>
-                <div class="b-btn-s">Book Online</div>
-              </div>
-            </div>
-            <div class="b-rating">★★★★★ <span>4.9 · 250+ Google reviews</span></div>
-          </div>
-          <div class="browser-footer">
-            <div class="b-stat">🚨 <strong>24/7</strong>&nbsp;Emergency</div>
-            <div class="b-stat">🏠 <strong>Same-Day</strong>&nbsp;Service</div>
-            <div class="b-stat">✅ Licensed & Insured</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Other -->
-    <div class="ind-panel" id="p-other">
-      <div class="ind-layout">
-        <div>
-          <h3 class="ind-h3">Any Trade.<br><em>Same Approach.</em></h3>
-          <p class="ind-body">Roofers, electricians, pool services — the same problem shows up across every trade. Good work, bad website. The fix is the same too: a site that explains what you do, where you do it, and how to book you.</p>
-          <ul class="ind-features">
-            <li>Copy written for your trade — not swapped in from a template</li>
-            <li>Contact form that asks the right questions for your type of job</li>
-            <li>Built to show up in local searches for your city and service area</li>
-          </ul>
-          <button class="btn-fill" onclick="scrollToEl('#cta')">Request a Free Demo for Your Trade →</button>
-        </div>
-        <div class="browser-wrap">
-          <div class="browser-bar">
-            <div class="b-dot" style="background:#ff5f57"></div>
-            <div class="b-dot" style="background:#ffbd2e"></div>
-            <div class="b-dot" style="background:#28c840"></div>
-            <div class="b-url">yourcompany.com</div>
-          </div>
-          <div class="browser-hero" style="background:linear-gradient(135deg,#1a1028,#2d1a4a)">
-            <div class="browser-accent" style="background:#8B5CF6"></div>
-            <div class="b-nav">
-              <div class="b-nav-logo">Brightside Electric</div>
-              <div class="b-nav-links">
-                <span class="b-nav-link">Services</span>
-                <span class="b-nav-link">Reviews</span>
-                <span class="b-nav-link">About</span>
-              </div>
-              <div class="b-nav-cta">Get a Quote</div>
-            </div>
-            <div class="b-hero-content">
-              <div class="b-brand">Nashville, TN · Master Licensed Electricians</div>
-              <div class="b-hl">Nashville's Most<br>Trusted Electrician.</div>
-              <div class="b-sub">Panel upgrades, rewiring, EV chargers & more. Same-week availability, upfront quotes.</div>
-              <div class="b-actions">
-                <div class="b-btn-p" style="background:#5b21b6;color:#fff">📞 Call Now</div>
-                <div class="b-btn-s">Get a Free Quote</div>
-              </div>
-            </div>
-            <div class="b-rating">★★★★★ <span>4.9 · 100+ Google reviews</span></div>
-          </div>
-          <div class="browser-footer">
-            <div class="b-stat">⚡ <strong>Master</strong>&nbsp;Licensed</div>
-            <div class="b-stat">📅 Same-Week Availability</div>
-            <div class="b-stat">✅ Fully Insured</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
 
 <!-- ─────────────────────────────────────────────
-     PROCESS
+     DEMO
 ───────────────────────────────────────────── -->
-<section id="process">
+<section id="demo">
+  <div class="w">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-kicker">Live demo</div>
+        <h2 class="section-h2">See exactly what<br><em>happens when you miss a call.</em></h2>
+      </div>
+    </div>
+    <div class="demo-placeholder reveal">
+      <div class="demo-inner">
+        <div class="demo-play-btn" aria-label="Play demo video">&#9654;</div>
+        <div class="demo-caption">Demo video — the full flow, start to finish</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─────────────────────────────────────────────
+     HOW IT WORKS
+───────────────────────────────────────────── -->
+<section id="how-it-works">
   <div class="w">
     <div class="section-header reveal">
       <div>
         <div class="section-kicker">How it works</div>
-        <h2 class="section-h2">14 Days.<br><em>Here's What That Looks Like.</em></h2>
+        <h2 class="section-h2">Three steps.<br><em>Fully automatic.</em></h2>
       </div>
-      <p style="font-size:16px;color:var(--dim);line-height:1.75;max-width:340px">Three steps. Your site goes live in 14 days — or you don't pay the second half.</p>
+      <p style="font-size:16px;color:var(--dim);line-height:1.75;max-width:340px">Once it's set up, you don't touch it. It runs in the background and sends you a notification when a job gets booked.</p>
     </div>
     <div class="process-grid">
       <div class="process-step reveal">
         <div class="process-step-num">01</div>
-        <div class="process-title">We talk for 30 minutes</div>
-        <div class="process-desc">I ask about your trade, your service area, the jobs you want more of, and the ones you don't. That conversation is what everything else gets built from.</div>
-        <div class="process-badge">Day 1</div>
+        <div class="process-title">You miss a call</div>
+        <div class="process-desc">Doesn't matter what time it is or what you're doing. When a call goes unanswered, the system detects it immediately.</div>
+        <div class="process-badge">Trigger</div>
       </div>
       <div class="process-step reveal d1">
         <div class="process-step-num">02</div>
-        <div class="process-title">I build your site</div>
-        <div class="process-desc">Custom design, written specifically for your trade and your city. Not a template with your name swapped in. I write the copy, build the layout, and set up the lead capture.</div>
-        <div class="process-badge">Days 2–13</div>
+        <div class="process-title">System texts back in seconds</div>
+        <div class="process-desc">An automated text goes out right away. I write the message based on your business — it sounds like you, not a bot. "Hey, I just missed your call — what do you need help with?"</div>
+        <div class="process-badge">Automatic</div>
       </div>
       <div class="process-step reveal d2">
         <div class="process-step-num">03</div>
-        <div class="process-title">You approve. It goes live.</div>
-        <div class="process-desc">You review it, request any changes, and sign off. I launch on day 14. The site starts taking inquiries the same day.</div>
-        <div class="process-badge">Day 14</div>
+        <div class="process-title">Caller responds. Job gets booked.</div>
+        <div class="process-desc">The conversation collects their info, answers common questions, and schedules the appointment. You get a notification. The job is on your calendar.</div>
+        <div class="process-badge">Captured</div>
       </div>
     </div>
-
   </div>
 </section>
+
+
+<!-- ─────────────────────────────────────────────
+     WHO IT HELPS
+───────────────────────────────────────────── -->
+<section id="who">
+  <div class="w">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-kicker">Who this is for</div>
+        <h2 class="section-h2">Any service business<br><em>that relies on inbound calls.</em></h2>
+      </div>
+    </div>
+    <div class="who-grid reveal">
+      <div class="who-item">HVAC</div>
+      <div class="who-item">Plumbing</div>
+      <div class="who-item">Landscaping</div>
+      <div class="who-item">Roofing</div>
+      <div class="who-item">Electrical</div>
+      <div class="who-item">Pool Service</div>
+      <div class="who-item">Pressure Washing</div>
+      <div class="who-item">Bounce Houses</div>
+      <div class="who-item">Pest Control</div>
+      <div class="who-item">Carpet Cleaning</div>
+      <div class="who-item">Junk Removal</div>
+      <div class="who-item">Any Service Trade</div>
+    </div>
+    <p class="reveal" style="margin-top:32px;font-size:15px;color:var(--dim)">If your business gets inbound calls and you sometimes can't answer them, this is for you.</p>
+  </div>
+</section>
+
 
 <!-- ─────────────────────────────────────────────
      ABOUT
@@ -454,7 +294,7 @@
   <div class="w">
     <div class="about-inner reveal">
       <div class="about-left">
-        <div class="section-kicker">Who builds your site</div>
+        <div class="section-kicker">Who built this</div>
         <h2 class="section-h2">Just me.<br><em>Clay.</em></h2>
         <div class="about-visual">
           <div class="about-avatar">Cl</div>
@@ -466,17 +306,18 @@
         </div>
       </div>
       <div class="about-right">
-        <p class="about-p">I'm Clay. Computer science background, some time in cybersecurity — but what I actually care about is building things that do something useful.</p>
-        <p class="about-p">I started working with contractors because the problem was so obvious. Great tradespeople with embarrassing websites, losing jobs to competitors who were worse at the actual work but easier to find online. That bothered me.</p>
-        <p class="about-p">Klaido is just me. I take on a small number of clients at a time, build every site myself, and write copy specific to your trade and your city. No account managers. No hand-offs. You deal with the person who built your site.</p>
+        <p class="about-p">I'm Clay. Computer science background, some time in cybersecurity — but what I actually care about is building things that solve real problems.</p>
+        <p class="about-p">I built this because every contractor I talked to had the same story: busy season, slammed with work, missing calls left and right, and just accepting it as part of the job. They didn't know how many jobs were walking out the door every week.</p>
+        <p class="about-p">This system is simple, it runs without maintenance, and it works. I set it up for you personally — it's not a self-serve tool. You talk to me, I configure everything for your business, and it goes live within a day.</p>
         <div class="about-sig">
           <div class="about-sig-name">Clay</div>
-          <div class="about-sig-title">Founder, Klaido Solutions</div>
+          <div class="about-sig-title">Founder, Klaido</div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- ─────────────────────────────────────────────
      TESTIMONIALS
@@ -487,7 +328,7 @@
 
     <div class="testi-feature reveal">
       <div class="testi-feature-quote">"</div>
-      <blockquote class="testi-feature-text">Honestly wasn't sure what to expect. We'd had a website for years that did nothing. Within the first month we had 14 new installs booked through it. I wish I'd done this two years ago.</blockquote>
+      <blockquote class="testi-feature-text">I was missing 8 or 10 calls a week and just writing them off. Now every one of them gets a text back within a minute. Had three jobs booked last week from calls I never answered. It's a no-brainer.</blockquote>
       <div class="testi-feature-author">
         <div class="testi-feature-avatar">MT</div>
         <div>
@@ -501,7 +342,7 @@
     <div class="testi-two-col">
       <div class="testi-small reveal">
         <div class="testi-stars">★★★★★</div>
-        <p>"I've paid agencies twice as much for half the result. Clay actually asked questions about my business before building anything. Quote requests tripled inside a month."</p>
+        <p>"Set it up and forgot about it. Checked my messages two weeks later and there were 11 conversations it had handled automatically. Two of them turned into booked jobs."</p>
         <div class="testi-small-author">
           <span class="testi-small-avatar">SW</span>
           <div>
@@ -512,7 +353,7 @@
       </div>
       <div class="testi-small reveal d1">
         <div class="testi-stars">★★★★★</div>
-        <p>"Our old site looked like it was built in 2009 because it was. Emergency calls are up and I can actually tell people to look us up without cringing."</p>
+        <p>"Customer texted at 10pm about a pipe issue. System booked them for 7am. I didn't see any of it until I checked my calendar in the morning. That job was $600."</p>
         <div class="testi-small-author">
           <span class="testi-small-avatar">DM</span>
           <div>
@@ -525,29 +366,31 @@
   </div>
 </section>
 
+
 <!-- ─────────────────────────────────────────────
-     GUARANTEE
+     PRICING
 ───────────────────────────────────────────── -->
 <section id="guarantee">
   <div class="w">
     <div class="guarantee-inner reveal">
       <div class="guarantee-badge" aria-hidden="true">
-        <div style="font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--dim);text-transform:uppercase;margin-bottom:8px">Payment structure</div>
-        <div style="font-family:var(--serif);font-size:48px;line-height:1;color:var(--white)">$0</div>
-        <div style="font-size:13px;color:var(--dim);margin-top:6px">to see the demo</div>
+        <div style="font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--dim);text-transform:uppercase;margin-bottom:8px">After trial</div>
+        <div style="font-family:var(--serif);font-size:48px;line-height:1;color:var(--white)">$97</div>
+        <div style="font-size:13px;color:var(--dim);margin-top:6px">per month</div>
       </div>
       <div class="guarantee-text">
-        <h3>See it first. <em>Pay after.</em></h3>
-        <p>I build your demo before any money changes hands. If you like it and want to move forward: 50% to start, 50% when you approve the final site. If you don't want to proceed, you owe nothing.</p>
+        <h3>14-day free trial. <em>No contracts.</em></h3>
+        <p>I handle the full setup — forwarding number, message templates, calendar connection. Takes about a day. Then it runs without you touching anything.</p>
         <ul style="margin-top:20px;display:flex;flex-direction:column;gap:10px;list-style:none">
-          <li style="font-size:14px;color:var(--dim)">Demo built and sent before any payment</li>
-          <li style="font-size:14px;color:var(--dim)">50% deposit to start, 50% when you approve the final site</li>
-          <li style="font-size:14px;color:var(--dim)">If I miss 14 days on my end — second payment is waived until it's done</li>
+          <li style="font-size:14px;color:var(--dim)">Free 14-day trial — no card required to start</li>
+          <li style="font-size:14px;color:var(--dim)">Full setup included, configured for your business</li>
+          <li style="font-size:14px;color:var(--dim)">$97/month after trial — cancel any time, no questions</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- ─────────────────────────────────────────────
      FAQ
@@ -562,28 +405,29 @@
     </div>
     <div class="faq-wrap">
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How long does it actually take?<div class="faq-icon" aria-hidden="true">+</div></button>
-        <div class="faq-a"><div class="faq-a-inner">14 days from deposit. Day 1 is a 30-minute call. Days 2–13 I build. Day 14 I launch. If I miss the deadline for any reason on my end, the second payment gets waived until it's done.</div></div>
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How fast does it actually respond?<div class="faq-icon" aria-hidden="true">+</div></button>
+        <div class="faq-a"><div class="faq-a-inner">Usually within 30–60 seconds of the missed call. Fast enough that most people assume you saw it and texted back immediately.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What if I already have a website?<div class="faq-icon" aria-hidden="true">+</div></button>
-        <div class="faq-a"><div class="faq-a-inner">Most clients come to me with an existing site. I'll look at it before our call, tell you what's actually costing you leads, and build something better from scratch. Your old site stays live the whole time.</div></div>
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What does the text actually say?<div class="faq-icon" aria-hidden="true">+</div></button>
+        <div class="faq-a"><div class="faq-a-inner">I write the messages based on your business, your trade, and how you talk. It doesn't sound like a bot. A typical first message: "Hey, this is [your name] — I just missed your call. What can I help you with?"</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What if they ask something I need to answer myself?<div class="faq-icon" aria-hidden="true">+</div></button>
+        <div class="faq-a"><div class="faq-a-inner">The system handles common questions — pricing, availability, service area — and collects their info. Anything outside the script gets flagged and forwarded to you as a notification so you can jump in.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What do I need to get set up?<div class="faq-icon" aria-hidden="true">+</div></button>
+        <div class="faq-a"><div class="faq-a-inner">Just a 20-minute call with me. I handle everything: the forwarding number, the message flows, the calendar connection. You don't touch a single setting.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What does it cost?<div class="faq-icon" aria-hidden="true">+</div></button>
-        <div class="faq-a"><div class="faq-a-inner">Every project is quoted individually. Most site builds land between $1,500–$4,000 depending on scope. The demo is free — you'll see exactly what you're getting before any money changes hands.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Do I need to know anything about websites?<div class="faq-icon" aria-hidden="true">+</div></button>
-        <div class="faq-a"><div class="faq-a-inner">None. You answer questions about your business, I handle everything else. Design, copy, build, launch. The only thing you need to do is show up to the 30-minute call.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What happens after the site launches?<div class="faq-icon" aria-hidden="true">+</div></button>
-        <div class="faq-a"><div class="faq-a-inner">30 days of post-launch support is included. Need to change your service area, update pricing, swap a photo? I handle it. After that, ongoing changes are available at a flat monthly rate if you want it.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Free 14-day trial, no card required. $97/month after that. No setup fee, no contracts. If it's not working for you, cancel any time.</div></div>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- ─────────────────────────────────────────────
      CTA
@@ -592,9 +436,9 @@
   <div class="w">
     <div class="cta-inner reveal">
       <div class="cta-left">
-        <div class="section-kicker">Get a free demo</div>
-        <h2 class="cta-h2">Request a<br><em>Free Demo</em></h2>
-        <p class="cta-body">Fill this in and I'll build you a free demo — designed around your specific trade and city. You look at it, decide if you want to move forward. No sales call. No pressure.</p>
+        <div class="section-kicker">Get started</div>
+        <h2 class="cta-h2">Want this set up for<br><em>your business?</em></h2>
+        <p class="cta-body">Book a 20-minute call. I'll ask about your business, show you the system live, and set up your free trial on the spot if you want it. No sales pitch.</p>
         <div id="lead-form-wrap">
           <form class="lead-form" onsubmit="submitLead(event)" novalidate>
             <div class="lead-row">
@@ -603,36 +447,37 @@
             </div>
             <input class="lead-input" type="tel" placeholder="Phone number" autocomplete="tel" aria-label="Phone number" required>
             <input class="lead-input" type="text" placeholder="Business type (e.g. HVAC, Plumbing...)" autocomplete="organization" aria-label="Business type" required>
-            <button class="btn-fill" type="submit" style="font-size:15px;padding:16px 36px;width:100%;justify-content:center">Request My Free Demo →</button>
+            <button class="btn-fill" type="submit" style="font-size:15px;padding:16px 36px;width:100%;justify-content:center">Book My Free Call →</button>
           </form>
-          <div class="cta-small" style="margin-top:12px">Free. No card. I'll email you the demo directly.</div>
+          <div class="cta-small" style="margin-top:12px">Free. No card needed. I'll reach out within a few hours.</div>
         </div>
         <div class="form-success" id="form-success">
           <div class="form-success-h">Got it.</div>
-          <div class="form-success-p">I'll build your demo and send it over within 24 hours. Keep an eye on your inbox.</div>
+          <div class="form-success-p">I'll reach out within a few hours to schedule a time. Talk soon.</div>
         </div>
       </div>
       <div class="cta-right">
         <div class="cta-what-happens">
-          <div class="cwh-title">What happens after you submit</div>
+          <div class="cwh-title">What happens on the call</div>
           <div class="cwh-step">
             <div class="cwh-num">1</div>
-            <div class="cwh-text">I review your business type and location — usually within a few hours.</div>
+            <div class="cwh-text">I ask about your business — what you do, your service area, how many calls you get per week.</div>
           </div>
           <div class="cwh-step">
             <div class="cwh-num">2</div>
-            <div class="cwh-text">I build a real demo page — designed for your trade, your city, your customers. Not a wireframe. An actual site.</div>
+            <div class="cwh-text">I show you the system live — you'll see exactly what your customers receive when they text back.</div>
           </div>
           <div class="cwh-step">
             <div class="cwh-num">3</div>
-            <div class="cwh-text">I send it to you. You look at it. If you want to move forward, great. If not, no hard feelings.</div>
+            <div class="cwh-text">If you want to try it, I set up your free trial right then. Takes about 20 minutes to go live.</div>
           </div>
-          <div class="cwh-note">No call required to see the demo. No pitch. Just a link.</div>
+          <div class="cwh-note">No obligation. If it's not a fit, I'll tell you honestly.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- ─────────────────────────────────────────────
      FOOTER
@@ -641,54 +486,54 @@
   <div class="w">
     <div class="footer-cols">
       <div>
-        <div class="footer-logo" style="margin-bottom:14px">Klaido <em>Solutions</em></div>
-        <div class="footer-copy" style="line-height:1.8;max-width:220px">Websites for home service businesses. Built from scratch, in 14 days, by one person.</div>
+        <div class="footer-logo" style="margin-bottom:14px">Klaido</div>
+        <div class="footer-copy" style="line-height:1.8;max-width:220px">Missed call automation for service businesses. Built and managed by one person.</div>
       </div>
       <div>
-        <div class="footer-heading">Services</div>
+        <div class="footer-heading">Product</div>
         <div class="footer-links">
-          <a href="#industry" class="footer-link">HVAC Websites</a>
-          <a href="#industry" class="footer-link">Plumbing Websites</a>
-          <a href="#industry" class="footer-link">Landscaping Websites</a>
-          <a href="#industry" class="footer-link">All Trades</a>
+          <a href="#demo" class="footer-link">See Demo</a>
+          <a href="#how-it-works" class="footer-link">How It Works</a>
+          <a href="#who" class="footer-link">Who It Helps</a>
+          <a href="#guarantee" class="footer-link">Pricing</a>
         </div>
       </div>
       <div>
         <div class="footer-heading">Company</div>
         <div class="footer-links">
-          <a href="#process" class="footer-link">How It Works</a>
-          <a href="#testimonials" class="footer-link">Client Results</a>
+          <a href="#about" class="footer-link">About</a>
+          <a href="#testimonials" class="footer-link">Results</a>
           <a href="#faq" class="footer-link">FAQ</a>
-          <a href="#cta" class="footer-link">Get a Demo</a>
+          <a href="#cta" class="footer-link">Book a Call</a>
         </div>
       </div>
     </div>
     <div class="footer-inner" style="padding:24px 0">
-      <div class="footer-copy">© 2026 Klaido Solutions</div>
+      <div class="footer-copy">© 2026 Klaido</div>
       <div style="font-size:12px;color:var(--dim)">Built by Clay — <a href="mailto:clay@klaido.com" style="color:var(--dim)">clay@klaido.com</a></div>
     </div>
   </div>
 </footer>
 
 <!-- Mobile floating call button -->
-<button id="mobile-cta" onclick="scrollToEl('#cta')" aria-label="Get a free demo">📞</button>
+<button id="mobile-cta" onclick="scrollToEl('#cta')" aria-label="Book a call">📞</button>
 
 <!-- Sticky bar -->
 <div id="sticky-bar">
   <div class="sticky-left">
-    <div class="sticky-copy">I'll build your demo for free. You decide after you see it.</div>
+    <div class="sticky-copy">Stop losing jobs from missed calls.</div>
   </div>
-  <button class="btn-fill" onclick="scrollToEl('#cta')" style="padding:10px 24px;font-size:13px">Request a Free Demo →</button>
+  <button class="btn-fill" onclick="scrollToEl('#cta')" style="padding:10px 24px;font-size:13px">Book a Free Call →</button>
 </div>
 
 <!-- Exit intent modal -->
 <div id="exit-modal" role="dialog" aria-modal="true" aria-labelledby="exit-heading">
   <div class="exit-box">
     <button class="exit-close" onclick="closeExit()">✕</button>
-    <h2 class="exit-h" id="exit-heading">Before you go —<br><em>see what I'd build for you.</em></h2>
-    <p class="exit-p">Leave your email. I'll build a free demo around your trade and send it over. No call required, no obligation.</p>
+    <h2 class="exit-h" id="exit-heading">Before you go —<br><em>see how many calls you're missing.</em></h2>
+    <p class="exit-p">Leave your email and I'll send you a quick breakdown of what missed call automation could mean for your type of business.</p>
     <input class="exit-input" id="exit-email" type="email" placeholder="your@email.com" aria-label="Your email address">
-    <button class="btn-fill" style="width:100%;justify-content:center;padding:14px" onclick="submitExit()">Send Me the Free Demo →</button>
+    <button class="btn-fill" style="width:100%;justify-content:center;padding:14px" onclick="submitExit()">Send Me the Info →</button>
     <button class="exit-skip" onclick="closeExit()">No thanks</button>
   </div>
 </div>
@@ -704,14 +549,14 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "Klaido Solutions",
+  "name": "Klaido",
   "url": "https://klaido.com",
-  "description": "High-converting websites for home service businesses. Built in 14 days.",
+  "description": "Missed call automation for service businesses. Texts back in seconds, books the appointment automatically.",
   "areaServed": "US",
-  "serviceType": ["Web Design", "Web Development", "Lead Generation"],
+  "serviceType": ["Missed Call Automation", "SMS Follow-up", "Appointment Booking"],
   "offers": {
     "@type": "Offer",
-    "description": "Free personalised demo site before any commitment"
+    "description": "14-day free trial, $97/month after"
   }
 }
 </script>

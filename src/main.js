@@ -1,36 +1,3 @@
-/* ── Industry labels ── */
-const DATA = {
-  hvac:  { label: 'HVAC Companies' },
-  land:  { label: 'Landscaping Companies' },
-  plumb: { label: 'Plumbing Companies' },
-  other: { label: 'Service Businesses' },
-};
-
-let current = null;
-
-function selectInd(ind) {
-  current = ind;
-  try { localStorage.setItem('klaido_ind', ind); } catch(e){}
-
-  const d = DATA[ind];
-
-  /* Trade buttons */
-  document.querySelectorAll('.trade-btn').forEach(t => {
-    const on = t.dataset.ind === ind;
-    t.classList.toggle('active', on);
-  });
-
-  /* Section label */
-  document.getElementById('sectionLabel').textContent = d.label;
-
-
-  /* Panels */
-  document.getElementById('noSel').style.display = 'none';
-  document.querySelectorAll('.ind-panel').forEach(p => p.classList.remove('on'));
-  const panel = document.getElementById('p-' + ind);
-  if (panel) panel.classList.add('on');
-}
-
 
 /* ── Scroll reveals ── */
 const obs = new IntersectionObserver(entries => {
@@ -40,21 +7,14 @@ const obs = new IntersectionObserver(entries => {
 }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-/* ── Custom cursor + parallax (merged into one mousemove listener) ── */
-const cur = document.getElementById('cur');
+/* ── Hero parallax on mousemove ── */
 const heroBlob = document.querySelector('.hero-blob');
 const heroBgWord = document.querySelector('.hero-bg-word');
 document.addEventListener('mousemove', e => {
-  cur.style.left = e.clientX + 'px';
-  cur.style.top  = e.clientY + 'px';
   const mx = (e.clientX / window.innerWidth - 0.5);
   const my = (e.clientY / window.innerHeight - 0.5);
   if (heroBlob) heroBlob.style.transform = `translate(${mx*20}px,${my*20}px)`;
   if (heroBgWord) heroBgWord.style.transform = `translate(${mx*-12}px,${my*-8}px)`;
-});
-document.querySelectorAll('button,a,.browser-wrap').forEach(el => {
-  el.addEventListener('mouseenter', () => cur.classList.add('big'));
-  el.addEventListener('mouseleave', () => cur.classList.remove('big'));
 });
 
 /* ── Scroll handlers (merged into one listener) ── */
@@ -70,11 +30,6 @@ window.addEventListener('scroll', () => {
   stickyBar.classList.toggle('show', y > 600);
 }, {passive: true});
 
-/* ── Restore saved state ── */
-try {
-  const saved = localStorage.getItem('klaido_ind');
-  if (saved && DATA[saved]) selectInd(saved);
-} catch(e){}
 
 /* ── Hero card step animation ── */
 (function() {
@@ -160,7 +115,7 @@ function toggleMobileNav() {
 
   const ctx = canvas.getContext('2d');
   let particles = [];
-  let W, H, animId;
+  let W, H;
   let paused = false;
 
   function resize() {
@@ -196,7 +151,7 @@ function toggleMobileNav() {
       if (p.x < 0) p.x = 1; if (p.x > 1) p.x = 0;
       if (p.y < 0) p.y = 1; if (p.y > 1) p.y = 0;
     });
-    animId = requestAnimationFrame(draw);
+    requestAnimationFrame(draw);
   }
 
   document.addEventListener('visibilitychange', () => {
@@ -348,7 +303,6 @@ gsap.to('.hero-bg-word', {
 });
 
 /* ── Expose functions to global scope for inline onclick handlers ── */
-window.selectInd = selectInd;
 window.scrollToEl = scrollToEl;
 window.toggleMobileNav = toggleMobileNav;
 window.toggleFaq = toggleFaq;
