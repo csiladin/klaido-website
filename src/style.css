@@ -1470,7 +1470,7 @@ footer{
   text-align:center;
   max-width:860px;
   margin:0 auto;
-  padding:88px 0 64px;
+  padding:16px 0 60px;
 }
 .hero-center .hero-index{
   justify-content:center;
@@ -1487,6 +1487,18 @@ footer{
 .hero-card-wrap{
   max-width:520px;
   margin:0 auto 80px;
+}
+@media(max-width:768px){
+  .hero-center{padding:12px 0 48px}
+  .hero-center .hero-sub{font-size:16px}
+  .hero-card-wrap{margin-bottom:48px}
+}
+@media(max-width:600px){
+  .hero-center{padding:8px 0 40px}
+  .hero-center .hero-actions .btn-fill,
+  .hero-center .hero-actions .btn-ghost{width:100%;justify-content:center;padding:16px 20px;font-size:15px}
+  .hero-center .hero-actions{flex-direction:column;gap:10px}
+  .hero-card-wrap{margin-bottom:32px}
 }
 
 /* ─────────────────────────────────────────────
@@ -1507,7 +1519,7 @@ footer{
 }
 .stat-big{
   font-family:var(--serif);
-  font-size:clamp(72px,10vw,136px);
+  font-size:clamp(56px,12vw,136px);
   font-weight:400;
   line-height:1;
   letter-spacing:-.04em;
@@ -1769,6 +1781,13 @@ footer{
 
   /* Guarantee */
   .guarantee-text h3{font-size:clamp(20px,6vw,28px)}
+
+  /* New Apple sections */
+  .statement-section{padding:60px 0}
+  .pricing-card{padding:36px 24px}
+  .pricing-amount{font-size:clamp(52px,14vw,80px)}
+  .testi-pullquote{padding:32px 20px}
+  .section-title-center{margin-bottom:32px}
 }
 
 /* ── 390px — iPhone SE / very small ── */
@@ -1791,11 +1810,19 @@ footer{
   /* Exit modal */
   .exit-box{padding:28px 18px}
   .exit-h{font-size:20px}
+
+  /* New Apple sections */
+  .statement-text{font-size:clamp(28px,8vw,40px)}
+  .problem-lead{font-size:clamp(22px,7vw,30px)}
+  #stats{padding:48px 0}
+  .stat-big{font-size:clamp(48px,13vw,72px)}
+  .pricing-card{padding:28px 20px}
+  .pricing-amount{font-size:clamp(48px,13vw,72px)}
 }
 
 /* ── Touch-target enforcement ── */
 @media(hover:none),(pointer:coarse){
-  .btn-fill,.btn-ghost,.faq-q,.nav-cta,
+  .btn-fill,.btn-ghost,.btn-fill--lg,.btn-ghost--lg,.faq-q,.nav-cta,
   #sticky-bar .btn-fill{
     min-height:44px;
   }
