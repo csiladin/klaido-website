@@ -712,6 +712,26 @@ nav.scrolled{
 }
 
 /* ─────────────────────────────────────────────
+   PROBLEM SECTION
+───────────────────────────────────────────── */
+#problem{padding:100px 0 80px}
+.problem-statement{max-width:800px}
+.problem-lines{
+  display:flex;flex-direction:column;gap:20px;
+  border-left:2px solid var(--line);
+  padding-left:28px;
+  max-width:640px;
+}
+.problem-line{
+  font-size:17px;line-height:1.75;
+  color:var(--dim);
+}
+@media(max-width:700px){
+  #problem{padding:72px 0 60px}
+  .problem-line{font-size:15px}
+}
+
+/* ─────────────────────────────────────────────
    WHO SECTION
 ───────────────────────────────────────────── */
 .who-grid{

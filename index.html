@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Klaido — Turn Missed Calls Into Booked Jobs Automatically</title>
-<meta name="description" content="Missed call automation for service businesses. When you can't answer, the system texts back in seconds, qualifies the caller, and books the appointment.">
+<title>Klaido — Never Miss Another $300–$1,000 Job Again</title>
+<meta name="description" content="Missed call automation for service businesses. Every missed call gets an instant AI response, follow-up, and booking — automatically.">
 <meta name="theme-color" content="#050507">
 <link rel="canonical" href="https://klaido.com/">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://klaido.com/">
-<meta property="og:title" content="Klaido — Turn Missed Calls Into Booked Jobs Automatically">
-<meta property="og:description" content="Missed call automation for service businesses. Stop losing jobs when you can't answer the phone.">
+<meta property="og:title" content="Klaido — Never Miss Another $300–$1,000 Job Again">
+<meta property="og:description" content="Every missed call gets an instant AI response, follow-up, and booking — automatically.">
 <meta property="og:image" content="https://klaido.com/og-image.jpg">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Klaido — Turn Missed Calls Into Booked Jobs Automatically">
-<meta name="twitter:description" content="Missed call automation for service businesses. Stop losing jobs when you can't answer the phone.">
+<meta name="twitter:title" content="Klaido — Never Miss Another $300–$1,000 Job Again">
+<meta name="twitter:description" content="Every missed call gets an instant AI response, follow-up, and booking — automatically.">
 <meta name="twitter:image" content="https://klaido.com/og-image.jpg">
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha384-d+vyQ0dYcymoP8ndq2hW7FGC50nqGdXUEgoOUGxbbkAJwZqL7h+jKN0GGgn9hFDS" crossorigin="anonymous" defer></script>
@@ -26,11 +26,8 @@
 <body>
 
 <a href="#main" class="skip-link">Skip to main content</a>
-<!-- Progress bar -->
 <div id="progress-bar" aria-hidden="true"></div>
-<!-- Grain overlay -->
 <div id="grain" aria-hidden="true"></div>
-<!-- Toast container -->
 <div id="toast-container" aria-live="polite"></div>
 
 <!-- ─────────────────────────────────────────────
@@ -44,7 +41,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
-  <button class="nav-cta" onclick="scrollToEl('#cta')">Book a Call →</button>
+  <button class="nav-cta" onclick="scrollToEl('#cta')">Get This Set Up →</button>
   <button id="nav-ham" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
 </nav>
 
@@ -54,7 +51,7 @@
   <a href="#how-it-works" onclick="toggleMobileNav()">How It Works</a>
   <a href="#about" onclick="toggleMobileNav()">About</a>
   <a href="#faq" onclick="toggleMobileNav()">FAQ</a>
-  <button class="btn-fill" onclick="toggleMobileNav();requestAnimationFrame(()=>scrollToEl('#cta'))" style="font-size:16px;padding:16px 40px">Book a Call</button>
+  <button class="btn-fill" onclick="toggleMobileNav();requestAnimationFrame(()=>scrollToEl('#cta'))" style="font-size:16px;padding:16px 40px">Get This Set Up</button>
 </div>
 
 <main id="main">
@@ -69,23 +66,22 @@
   <div class="w">
     <div class="hero-inner">
 
-      <!-- Left -->
       <div class="hero-left reveal">
         <div class="hero-index">Missed call automation for service businesses</div>
 
         <h1 class="hero-h1">
-          Turn Missed Calls<br>
-          <span class="line2">Into Booked Jobs<br>
-          <em>Automatically.</em></span>
+          Never Miss Another<br>
+          <span class="line2">$300–$1,000<br>
+          <em>Job Again.</em></span>
         </h1>
 
         <p class="hero-sub">
-          When you can't answer the phone, this system texts back in seconds, qualifies the caller, and books the appointment. Most jobs go to whoever responds first.
+          Every missed call gets an instant AI response, follow-up, and booking — automatically.
         </p>
 
         <div class="hero-actions">
-          <button class="btn-fill" onclick="scrollToEl('#demo')">Watch the Demo →</button>
-          <button class="btn-ghost" onclick="scrollToEl('#cta')">Book a Call</button>
+          <button class="btn-fill" onclick="scrollToEl('#demo')">Watch Live Demo →</button>
+          <button class="btn-ghost" onclick="scrollToEl('#cta')">Get This Set Up</button>
         </div>
 
       </div>
@@ -113,7 +109,7 @@
             <div class="hero-card-event hero-card-event--captured card-step" id="card-step-3">
               <div class="hero-card-icon hero-card-icon--captured"></div>
               <div>
-                <div class="hero-card-event-title">Auto-text sent in 45 sec</div>
+                <div class="hero-card-event-title">AI replied in 45 sec</div>
                 <div class="hero-card-event-sub">"Hey, I just missed your call — how can I help?"</div>
               </div>
               <div class="hero-card-tag hero-card-tag--captured">Replied</div>
@@ -125,7 +121,7 @@
               <div class="hero-card-icon hero-card-icon--booked"></div>
               <div>
                 <div class="hero-card-event-title">Appointment booked</div>
-                <div class="hero-card-event-sub">Tomorrow, 9:00 AM · AC repair</div>
+                <div class="hero-card-event-sub">Tomorrow, 9:00 AM · $420 job</div>
               </div>
               <div class="hero-card-tag hero-card-tag--booked">Booked</div>
             </div>
@@ -157,43 +153,20 @@
   </div>
 </section>
 
-<!-- ─────────────────────────────────────────────
-     TRADES STRIP
-───────────────────────────────────────────── -->
-<div class="marquee-wrap">
-  <div style="text-align:center;font-size:13px;letter-spacing:.08em;color:var(--dim);text-transform:uppercase;padding:18px 24px">
-    HVAC &nbsp;·&nbsp; Plumbing &nbsp;·&nbsp; Landscaping &nbsp;·&nbsp; Roofing &nbsp;·&nbsp; Electrical &nbsp;·&nbsp; Pool Service &nbsp;·&nbsp; Bounce Houses &nbsp;·&nbsp; Any Service Trade
-  </div>
-</div>
-
 
 <!-- ─────────────────────────────────────────────
      PROBLEM
 ───────────────────────────────────────────── -->
 <section id="problem">
   <div class="w">
-    <div class="section-header reveal">
-      <div>
-        <div class="section-kicker">The problem</div>
-        <h2 class="section-h2">You're losing jobs<br><em>you don't know about.</em></h2>
-      </div>
-      <p style="font-size:16px;color:var(--dim);line-height:1.75;max-width:340px">Every missed call is a potential job. Most callers don't leave voicemails — they hang up and call the next business on the list.</p>
-    </div>
-    <div class="process-grid">
-      <div class="process-step reveal">
-        <div class="process-step-num">01</div>
-        <div class="process-title">You miss the call</div>
-        <div class="process-desc">You're on a job, under a sink, on the roof, or just can't get to your phone. The call goes unanswered.</div>
-      </div>
-      <div class="process-step reveal d1">
-        <div class="process-step-num">02</div>
-        <div class="process-title">They don't leave a message</div>
-        <div class="process-desc">Most people don't bother with voicemail anymore. They hang up and search for the next option on the list.</div>
-      </div>
-      <div class="process-step reveal d2">
-        <div class="process-step-num">03</div>
-        <div class="process-title">Your competitor answers</div>
-        <div class="process-desc">The caller finds someone else, books the job, and you never knew there was a lead in the first place.</div>
+    <div class="problem-statement reveal">
+      <h2 class="section-h2" style="font-size:clamp(32px,4.5vw,58px);line-height:1.1;margin-bottom:40px">
+        Last week, you missed 12 calls.<br>That's <em style="-webkit-text-fill-color:inherit;color:var(--blue-s)">$3,600+ gone.</em>
+      </h2>
+      <div class="problem-lines">
+        <div class="problem-line">The average service job is worth $300–$1,000. Most businesses miss 10–15 inbound calls per week without realizing it.</div>
+        <div class="problem-line">Most callers don't leave voicemails. They hang up and call whoever is next. You never know the lead existed.</div>
+        <div class="problem-line">Whoever responds first gets the job. Right now, when you can't answer — that's not you.</div>
       </div>
     </div>
   </div>
@@ -208,13 +181,46 @@
     <div class="section-header reveal">
       <div>
         <div class="section-kicker">Live demo</div>
-        <h2 class="section-h2">See exactly what<br><em>happens when you miss a call.</em></h2>
+        <h2 class="section-h2">Watch How One Missed Call<br><em>Turns Into a Booked Job.</em></h2>
       </div>
+      <p style="font-size:16px;color:var(--dim);line-height:1.75;max-width:340px">Takes 30 seconds. This will change how you run your business.</p>
     </div>
     <div class="demo-placeholder reveal">
       <div class="demo-inner">
         <div class="demo-play-btn" aria-label="Play demo video">&#9654;</div>
         <div class="demo-caption">Demo video — the full flow, start to finish</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─────────────────────────────────────────────
+     ABOUT (credibility — placed before steps)
+───────────────────────────────────────────── -->
+<section id="about">
+  <div class="w">
+    <div class="about-inner reveal">
+      <div class="about-left">
+        <div class="section-kicker">Who built this</div>
+        <h2 class="section-h2">Built by Clay.<br><em>Set up by Clay.</em></h2>
+        <div class="about-visual">
+          <div class="about-avatar">Cl</div>
+          <div class="about-tags">
+            <span class="about-tag">CS degree</span>
+            <span class="about-tag">Cybersecurity background</span>
+            <span class="about-tag">Based in the US</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-right">
+        <p class="about-p">I'm Clay. Computer science background, time in cybersecurity — built things that had to work reliably, not just look good in a demo.</p>
+        <p class="about-p">I built this because every contractor I talked to had the same problem: slammed during busy season, missing calls constantly, and just accepting the loss. They didn't realize they were leaving thousands on the table every week.</p>
+        <p class="about-p">This isn't a self-serve platform. I set it up for you personally — your forwarding number, your message templates, your calendar. Done in a day. Then it runs without you.</p>
+        <div class="about-sig">
+          <div class="about-sig-name">Clay</div>
+          <div class="about-sig-title">Founder, Klaido</div>
+        </div>
       </div>
     </div>
   </div>
@@ -231,25 +237,25 @@
         <div class="section-kicker">How it works</div>
         <h2 class="section-h2">Three steps.<br><em>Fully automatic.</em></h2>
       </div>
-      <p style="font-size:16px;color:var(--dim);line-height:1.75;max-width:340px">Once it's set up, you don't touch it. It runs in the background and sends you a notification when a job gets booked.</p>
+      <p style="font-size:16px;color:var(--dim);line-height:1.75;max-width:340px">You don't touch anything. It runs in the background and sends you a notification when a job gets booked.</p>
     </div>
     <div class="process-grid">
       <div class="process-step reveal">
         <div class="process-step-num">01</div>
-        <div class="process-title">You miss a call</div>
-        <div class="process-desc">Doesn't matter what time it is or what you're doing. When a call goes unanswered, the system detects it immediately.</div>
+        <div class="process-title">Customer calls. You miss it.</div>
+        <div class="process-desc">You're on a job, in a crawl space, on the roof. Phone rings. You don't get to it. Normally, that lead is gone forever.</div>
         <div class="process-badge">Trigger</div>
       </div>
       <div class="process-step reveal d1">
         <div class="process-step-num">02</div>
-        <div class="process-title">System texts back in seconds</div>
-        <div class="process-desc">An automated text goes out right away. I write the message based on your business — it sounds like you, not a bot. "Hey, I just missed your call — what do you need help with?"</div>
+        <div class="process-title">AI responds instantly and qualifies.</div>
+        <div class="process-desc">Within 60 seconds, the system texts back. It sounds like you. Asks what they need. Collects their name, number, and job details — automatically.</div>
         <div class="process-badge">Automatic</div>
       </div>
       <div class="process-step reveal d2">
         <div class="process-step-num">03</div>
-        <div class="process-title">Caller responds. Job gets booked.</div>
-        <div class="process-desc">The conversation collects their info, answers common questions, and schedules the appointment. You get a notification. The job is on your calendar.</div>
+        <div class="process-title">Job gets booked. You find out.</div>
+        <div class="process-desc">The conversation ends with a scheduled appointment on your calendar. You get a notification. You didn't have to do anything.</div>
         <div class="process-badge">Captured</div>
       </div>
     </div>
@@ -265,56 +271,24 @@
     <div class="section-header reveal">
       <div>
         <div class="section-kicker">Who this is for</div>
-        <h2 class="section-h2">Any service business<br><em>that relies on inbound calls.</em></h2>
+        <h2 class="section-h2">Built for businesses<br><em>that rely on inbound calls.</em></h2>
       </div>
     </div>
     <div class="who-grid reveal">
+      <div class="who-item">Landscaping</div>
       <div class="who-item">HVAC</div>
       <div class="who-item">Plumbing</div>
-      <div class="who-item">Landscaping</div>
+      <div class="who-item">Contractors</div>
       <div class="who-item">Roofing</div>
       <div class="who-item">Electrical</div>
       <div class="who-item">Pool Service</div>
       <div class="who-item">Pressure Washing</div>
-      <div class="who-item">Bounce Houses</div>
       <div class="who-item">Pest Control</div>
       <div class="who-item">Carpet Cleaning</div>
       <div class="who-item">Junk Removal</div>
       <div class="who-item">Any Service Trade</div>
     </div>
     <p class="reveal" style="margin-top:32px;font-size:15px;color:var(--dim)">If your business gets inbound calls and you sometimes can't answer them, this is for you.</p>
-  </div>
-</section>
-
-
-<!-- ─────────────────────────────────────────────
-     ABOUT
-───────────────────────────────────────────── -->
-<section id="about">
-  <div class="w">
-    <div class="about-inner reveal">
-      <div class="about-left">
-        <div class="section-kicker">Who built this</div>
-        <h2 class="section-h2">Just me.<br><em>Clay.</em></h2>
-        <div class="about-visual">
-          <div class="about-avatar">Cl</div>
-          <div class="about-tags">
-            <span class="about-tag">CS degree</span>
-            <span class="about-tag">Cybersecurity background</span>
-            <span class="about-tag">Based in the US</span>
-          </div>
-        </div>
-      </div>
-      <div class="about-right">
-        <p class="about-p">I'm Clay. Computer science background, some time in cybersecurity — but what I actually care about is building things that solve real problems.</p>
-        <p class="about-p">I built this because every contractor I talked to had the same story: busy season, slammed with work, missing calls left and right, and just accepting it as part of the job. They didn't know how many jobs were walking out the door every week.</p>
-        <p class="about-p">This system is simple, it runs without maintenance, and it works. I set it up for you personally — it's not a self-serve tool. You talk to me, I configure everything for your business, and it goes live within a day.</p>
-        <div class="about-sig">
-          <div class="about-sig-name">Clay</div>
-          <div class="about-sig-title">Founder, Klaido</div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -379,11 +353,11 @@
         <div style="font-size:13px;color:var(--dim);margin-top:6px">per month</div>
       </div>
       <div class="guarantee-text">
-        <h3>14-day free trial. <em>No contracts.</em></h3>
-        <p>I handle the full setup — forwarding number, message templates, calendar connection. Takes about a day. Then it runs without you touching anything.</p>
+        <h3>One missed job pays for<br><em>this entire system.</em></h3>
+        <p>One $300 job you would have lost covers three months. Most clients recover the cost in the first week. Everything after that is pure upside.</p>
         <ul style="margin-top:20px;display:flex;flex-direction:column;gap:10px;list-style:none">
           <li style="font-size:14px;color:var(--dim)">Free 14-day trial — no card required to start</li>
-          <li style="font-size:14px;color:var(--dim)">Full setup included, configured for your business</li>
+          <li style="font-size:14px;color:var(--dim)">Full setup included — I configure everything for your business</li>
           <li style="font-size:14px;color:var(--dim)">$97/month after trial — cancel any time, no questions</li>
         </ul>
       </div>
@@ -436,9 +410,9 @@
   <div class="w">
     <div class="cta-inner reveal">
       <div class="cta-left">
-        <div class="section-kicker">Get started</div>
-        <h2 class="cta-h2">Want this set up for<br><em>your business?</em></h2>
-        <p class="cta-body">Book a 20-minute call. I'll ask about your business, show you the system live, and set up your free trial on the spot if you want it. No sales pitch.</p>
+        <div class="section-kicker">Get started free</div>
+        <h2 class="cta-h2">Stop Losing Jobs<br><em>Starting Today.</em></h2>
+        <p class="cta-body">Book a 20-minute call. I'll show you the system live and set up your free trial on the spot. No pitch — just a demo and setup if you want it.</p>
         <div id="lead-form-wrap">
           <form class="lead-form" onsubmit="submitLead(event)" novalidate>
             <div class="lead-row">
@@ -446,10 +420,10 @@
               <input class="lead-input" type="email" placeholder="Email address" autocomplete="email" aria-label="Email address" required>
             </div>
             <input class="lead-input" type="tel" placeholder="Phone number" autocomplete="tel" aria-label="Phone number" required>
-            <input class="lead-input" type="text" placeholder="Business type (e.g. HVAC, Plumbing...)" autocomplete="organization" aria-label="Business type" required>
-            <button class="btn-fill" type="submit" style="font-size:15px;padding:16px 36px;width:100%;justify-content:center">Book My Free Call →</button>
+            <input class="lead-input" type="text" placeholder="Business type (e.g. HVAC, Landscaping...)" autocomplete="organization" aria-label="Business type" required>
+            <button class="btn-fill" type="submit" style="font-size:15px;padding:16px 36px;width:100%;justify-content:center">Get This Set Up For My Business →</button>
           </form>
-          <div class="cta-small" style="margin-top:12px">Free. No card needed. I'll reach out within a few hours.</div>
+          <div class="cta-small" style="margin-top:12px">Free 14-day trial. No card needed. I'll reach out within a few hours.</div>
         </div>
         <div class="form-success" id="form-success">
           <div class="form-success-h">Got it.</div>
@@ -504,7 +478,7 @@
           <a href="#about" class="footer-link">About</a>
           <a href="#testimonials" class="footer-link">Results</a>
           <a href="#faq" class="footer-link">FAQ</a>
-          <a href="#cta" class="footer-link">Book a Call</a>
+          <a href="#cta" class="footer-link">Get Started</a>
         </div>
       </div>
     </div>
@@ -516,24 +490,24 @@
 </footer>
 
 <!-- Mobile floating call button -->
-<button id="mobile-cta" onclick="scrollToEl('#cta')" aria-label="Book a call">📞</button>
+<button id="mobile-cta" onclick="scrollToEl('#cta')" aria-label="Get this set up">📞</button>
 
 <!-- Sticky bar -->
 <div id="sticky-bar">
   <div class="sticky-left">
     <div class="sticky-copy">Stop losing jobs from missed calls.</div>
   </div>
-  <button class="btn-fill" onclick="scrollToEl('#cta')" style="padding:10px 24px;font-size:13px">Book a Free Call →</button>
+  <button class="btn-fill" onclick="scrollToEl('#cta')" style="padding:10px 24px;font-size:13px">Get This Set Up →</button>
 </div>
 
 <!-- Exit intent modal -->
 <div id="exit-modal" role="dialog" aria-modal="true" aria-labelledby="exit-heading">
   <div class="exit-box">
     <button class="exit-close" onclick="closeExit()">✕</button>
-    <h2 class="exit-h" id="exit-heading">Before you go —<br><em>see how many calls you're missing.</em></h2>
-    <p class="exit-p">Leave your email and I'll send you a quick breakdown of what missed call automation could mean for your type of business.</p>
+    <h2 class="exit-h" id="exit-heading">Before you go —<br><em>how many calls did you miss this week?</em></h2>
+    <p class="exit-p">Leave your email and I'll send you a breakdown of what this system could recover for your business specifically.</p>
     <input class="exit-input" id="exit-email" type="email" placeholder="your@email.com" aria-label="Your email address">
-    <button class="btn-fill" style="width:100%;justify-content:center;padding:14px" onclick="submitExit()">Send Me the Info →</button>
+    <button class="btn-fill" style="width:100%;justify-content:center;padding:14px" onclick="submitExit()">Send Me the Breakdown →</button>
     <button class="exit-skip" onclick="closeExit()">No thanks</button>
   </div>
 </div>
@@ -543,7 +517,6 @@
 <!-- ─────────────────────────────────────────────
      JAVASCRIPT
 ───────────────────────────────────────────── -->
-
 <script type="module" src="/src/main.js"></script>
 <script type="application/ld+json">
 {
@@ -551,12 +524,12 @@
   "@type": "ProfessionalService",
   "name": "Klaido",
   "url": "https://klaido.com",
-  "description": "Missed call automation for service businesses. Texts back in seconds, books the appointment automatically.",
+  "description": "Missed call automation for service businesses. Every missed call gets an instant AI response, follow-up, and booking — automatically.",
   "areaServed": "US",
   "serviceType": ["Missed Call Automation", "SMS Follow-up", "Appointment Booking"],
   "offers": {
     "@type": "Offer",
-    "description": "14-day free trial, $97/month after"
+    "description": "14-day free trial, $97/month after, full setup included"
   }
 }
 </script>
