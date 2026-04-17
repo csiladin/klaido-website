@@ -173,14 +173,47 @@
 <section id="demo">
   <div class="w">
     <div class="section-title-center reveal">
-      <div class="section-kicker">Live demo</div>
-      <h2 class="section-h2">Here's exactly what<br><em>happens when you miss a call.</em></h2>
-      <p class="section-intro">Watch this once. You'll understand everything.</p>
+      <div class="section-kicker">See it in action</div>
+      <h2 class="section-h2">This is what your<br><em>customer sees.</em></h2>
+      <p class="section-intro">You miss the call. Within 60 seconds, this conversation starts automatically.</p>
     </div>
-    <div class="demo-placeholder reveal">
-      <div class="demo-inner">
-        <div class="demo-play-btn" aria-label="Play demo video">&#9654;</div>
-        <div class="demo-caption">Full walkthrough — start to finish</div>
+    <div class="sms-demo reveal">
+      <div class="sms-phone">
+        <div class="sms-phone-bar">
+          <div class="sms-contact-wrap">
+            <div class="sms-contact-avatar">D</div>
+            <div>
+              <div class="sms-contact-name">Dave M.</div>
+              <div class="sms-contact-sub">HVAC repair · missed call 11:42 PM</div>
+            </div>
+          </div>
+        </div>
+        <div class="sms-body">
+          <div class="sms-bubble sms-bubble--out reveal">
+            <span>Hey Dave — I just missed your call. What can I help you with?</span>
+            <div class="sms-meta">11:43 PM · Delivered</div>
+          </div>
+          <div class="sms-bubble sms-bubble--in reveal d1">
+            <span>Hey yeah my AC stopped working, need someone to come out and look at it</span>
+            <div class="sms-meta">11:44 PM</div>
+          </div>
+          <div class="sms-bubble sms-bubble--out reveal d2">
+            <span>Got it — I can get out tomorrow morning. Does 9am work for you?</span>
+            <div class="sms-meta">11:44 PM · Delivered</div>
+          </div>
+          <div class="sms-bubble sms-bubble--in reveal d3">
+            <span>9am works perfect</span>
+            <div class="sms-meta">11:45 PM</div>
+          </div>
+          <div class="sms-bubble sms-bubble--out reveal d3">
+            <span>You're all set — booked for tomorrow at 9am. See you then 👍</span>
+            <div class="sms-meta">11:45 PM · Delivered</div>
+          </div>
+          <div class="sms-booked reveal d3">
+            <div class="sms-booked-check">✓</div>
+            <div class="sms-booked-text">Job booked · You were already asleep</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -226,9 +259,9 @@
         <div class="about-visual">
           <div class="about-avatar">Cl</div>
           <div class="about-tags">
-            <span class="about-tag">CS degree</span>
-            <span class="about-tag">Cybersecurity background</span>
-            <span class="about-tag">Based in the US</span>
+            <span class="about-tag">Done-for-you setup</span>
+            <span class="about-tag">US-based</span>
+            <span class="about-tag">Live same day</span>
           </div>
         </div>
       </div>
@@ -325,10 +358,17 @@
       <div class="pricing-card">
         <div class="pricing-amount"><span class="pricing-dollar">$</span>97<span class="pricing-period">/mo</span></div>
         <div class="pricing-after">after free trial</div>
+        <div class="pricing-setup-callout">
+          <div class="pricing-setup-icon">✓</div>
+          <div>
+            <div class="pricing-setup-title">Full setup included — free</div>
+            <div class="pricing-setup-desc">I configure your forwarding number, message templates, and calendar connection on a single call. You don't touch any settings.</div>
+          </div>
+        </div>
         <ul class="pricing-list">
           <li>14-day free trial — no card required to start</li>
-          <li>Full setup included — I configure everything for your business</li>
           <li>Cancel any time, no questions asked</li>
+          <li>Runs 24/7 — nights, weekends, holidays</li>
         </ul>
         <button class="btn-fill btn-fill--lg" onclick="scrollToEl('#cta')" style="width:100%;justify-content:center;margin-top:32px">Start My Free Trial →</button>
       </div>
@@ -381,11 +421,11 @@
         <div id="lead-form-wrap">
           <form class="lead-form" onsubmit="submitLead(event)" novalidate>
             <div class="lead-row">
-              <input class="lead-input" type="text" placeholder="Your name" autocomplete="name" aria-label="Your name" required>
-              <input class="lead-input" type="email" placeholder="Email address" autocomplete="email" aria-label="Email address" required>
+              <input class="lead-input" type="text" name="name" placeholder="Your name" autocomplete="name" aria-label="Your name" required>
+              <input class="lead-input" type="email" name="email" placeholder="Email address" autocomplete="email" aria-label="Email address" required>
             </div>
-            <input class="lead-input" type="tel" placeholder="Phone number" autocomplete="tel" aria-label="Phone number" required>
-            <input class="lead-input" type="text" placeholder="Business type (e.g. HVAC, Landscaping...)" autocomplete="organization" aria-label="Business type" required>
+            <input class="lead-input" type="tel" name="phone" placeholder="Phone number" autocomplete="tel" aria-label="Phone number" required>
+            <input class="lead-input" type="text" name="business" placeholder="Business type (e.g. HVAC, Landscaping...)" autocomplete="organization" aria-label="Business type" required>
             <button class="btn-fill btn-fill--lg" type="submit" style="width:100%;justify-content:center">Get This Set Up For My Business →</button>
           </form>
           <div class="cta-small" style="margin-top:12px">Free trial. No card needed. I'll reach out within a few hours.</div>
@@ -452,7 +492,7 @@
   </div>
 </footer>
 
-<button id="mobile-cta" onclick="scrollToEl('#cta')" aria-label="Get this set up">📞</button>
+<button id="mobile-cta" onclick="scrollToEl('#cta')" aria-label="Get this set up">💬</button>
 
 <div id="sticky-bar">
   <div class="sticky-left">

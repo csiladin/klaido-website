@@ -243,17 +243,28 @@ function closeExit() {
   if (_exitTriggerEl) { _exitTriggerEl.focus(); _exitTriggerEl = null; }
 }
 
-function submitExit() {
-  const email = document.getElementById('exit-email').value.trim();
-  if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    closeExit();
-  } else {
-    document.getElementById('exit-email').style.borderColor = 'rgba(255,80,80,.6)';
+/* Replace with your Formspree form ID — sign up free at formspree.io, create a form, paste the ID here */
+const FORMSPREE_ID = 'YOUR_FORM_ID';
+
+async function submitExit() {
+  const emailEl = document.getElementById('exit-email');
+  const email = emailEl.value.trim();
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    emailEl.style.borderColor = 'rgba(255,80,80,.6)';
+    return;
   }
+  try {
+    await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      method: 'POST',
+      body: JSON.stringify({ email, _source: 'exit-modal' }),
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
+    });
+  } catch {}
+  closeExit();
 }
 
 /* ── Lead form submit ── */
-function submitLead(e) {
+async function submitLead(e) {
   e.preventDefault();
   const form = e.target;
   const inputs = form.querySelectorAll('.lead-input[required]');
@@ -269,8 +280,29 @@ function submitLead(e) {
     }
   });
   if (!valid) return;
-  document.getElementById('lead-form-wrap').style.display = 'none';
-  document.getElementById('form-success').style.display = 'block';
+
+  const btn = form.querySelector('button[type="submit"]');
+  const originalText = btn.textContent;
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      document.getElementById('lead-form-wrap').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    } else {
+      btn.textContent = 'Try again';
+      btn.disabled = false;
+    }
+  } catch {
+    btn.textContent = 'Try again';
+    btn.disabled = false;
+  }
 }
 
 /* ── Magnetic button effect ── */
