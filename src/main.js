@@ -328,24 +328,18 @@ gsap.to('.hero-bg-word', {
   });
 })();
 
-/* ── GSAP SMS sequential reveal ── */
-gsap.set('.sms-bubble, .sms-booked', { opacity: 0, y: 18 });
+/* ── Solution flow: staggered row reveal ── */
+gsap.set('.sflow-item', { opacity: 0, x: -16 });
 ScrollTrigger.create({
-  trigger: '.sms-demo',
-  start: 'top 65%',
+  trigger: '.solution-flow',
+  start: 'top 70%',
   once: true,
   onEnter() {
-    gsap.to('.sms-bubble', {
-      opacity: 1, y: 0,
+    gsap.to('.sflow-item', {
+      opacity: 1, x: 0,
       duration: 0.6,
       ease: 'power2.out',
-      stagger: 0.38
-    });
-    gsap.to('.sms-booked', {
-      opacity: 1, y: 0,
-      duration: 0.7,
-      ease: 'back.out(1.5)',
-      delay: 0.38 * document.querySelectorAll('.sms-bubble').length + 0.1
+      stagger: 0.25
     });
   }
 });
