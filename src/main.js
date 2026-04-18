@@ -134,7 +134,7 @@ function toggleMobileNav() {
       dx: (Math.random() - 0.5) * 0.25,
       dy: (Math.random() - 0.5) * 0.25,
       o: Math.random() * 0.45 + 0.08,
-      hue: Math.random() > 0.5 ? '123,151,255' : '56,196,232'
+      hue: Math.random() > 0.5 ? '91,156,240' : '56,196,232'
     });
   }
 
