@@ -162,44 +162,6 @@ function toggleMobileNav() {
   draw();
 })();
 
-/* ── Count-up animation ── */
-function animateCount(el) {
-  const target = parseInt(el.dataset.count, 10);
-  const suffix = el.dataset.suffix || '';
-  const duration = 2000;
-  const start = performance.now();
-  function update(now) {
-    const progress = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    el.textContent = Math.round(eased * target) + suffix;
-    if (progress < 1) requestAnimationFrame(update);
-  }
-  requestAnimationFrame(update);
-}
-
-const countObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting && !e.target.dataset.counted) {
-      e.target.dataset.counted = '1';
-      animateCount(e.target);
-    }
-  });
-}, {threshold: 0.5});
-document.querySelectorAll('[data-count]').forEach(el => countObs.observe(el));
-
-function showToast(data) {
-  const toastContainer = document.getElementById('toast-container');
-  if (!toastContainer || !data) return;
-  const el = document.createElement('div');
-  el.className = 'toast';
-  el.innerHTML = `<div class="toast-body"><div class="toast-name">${data.name}</div><div class="toast-action">${data.action}</div></div>`;
-  toastContainer.appendChild(el);
-  requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('show')));
-  setTimeout(() => {
-    el.classList.add('hide');
-    setTimeout(() => el.remove(), 700);
-  }, 4500);
-}
 
 /* ── FAQ accordion ── */
 function toggleFaq(btn) {
@@ -317,17 +279,7 @@ document.querySelectorAll('.btn-fill, .btn-ghost, .nav-cta').forEach(btn => {
 });
 
 
-/* ── GSAP hero parallax on scroll ── */
-gsap.to('.hero-left', {
-  y: -60,
-  ease: 'none',
-  scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 1 }
-});
-gsap.to('.hero-right', {
-  y: -30,
-  ease: 'none',
-  scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 1 }
-});
+/* ── GSAP hero bg word parallax ── */
 gsap.to('.hero-bg-word', {
   y: 120,
   ease: 'none',
