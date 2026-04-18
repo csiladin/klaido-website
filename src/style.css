@@ -1304,3 +1304,89 @@ footer{
     transition-duration:.01ms !important;
   }
 }
+
+/* ══════════════════════════════════════════
+   CINEMATIC EXPERIENCE
+══════════════════════════════════════════ */
+
+/* ── Custom cursor ── */
+#cursor{
+  position:fixed;width:6px;height:6px;
+  background:var(--white);border-radius:50%;
+  pointer-events:none;z-index:99999;
+  transform:translate(-50%,-50%);
+  mix-blend-mode:difference;
+  opacity:0;
+}
+#cursor-ring{
+  position:fixed;width:36px;height:36px;
+  border:1px solid rgba(255,255,255,.22);border-radius:50%;
+  pointer-events:none;z-index:99998;
+  transform:translate(-50%,-50%);
+  opacity:0;
+  transition:width .35s cubic-bezier(.34,1.56,.64,1),height .35s cubic-bezier(.34,1.56,.64,1),border-color .25s,opacity .3s;
+}
+@media(hover:hover){
+  body.cursor-ready{cursor:none}
+  body.cursor-ready *{cursor:none!important}
+}
+@media(hover:none){#cursor,#cursor-ring{display:none}}
+
+/* ── Hero: cinematic full viewport ── */
+#hero{min-height:100svh;justify-content:center}
+.hero-center{padding:0 0 60px}
+.hero-word{display:inline-block}
+
+/* ── Statement: gut-punch scale ── */
+.statement-section{min-height:50vh;display:flex;align-items:center}
+.statement-text{font-size:clamp(52px,10vw,130px);letter-spacing:-.05em;line-height:1.02}
+
+/* ── Section headings: pure white, no gradient ── */
+.section-h2{
+  background:none;
+  -webkit-text-fill-color:var(--white);
+  color:var(--white);
+}
+.cta-h2{
+  background:none;
+  -webkit-text-fill-color:var(--white);
+  color:var(--white);
+}
+
+/* ── Process: editorial strip ── */
+.process-grid{
+  gap:1px;background:var(--line);
+  border:none;border-radius:0;
+  border-top:1px solid var(--line);
+  margin-top:80px;overflow:visible;
+}
+.process-step{
+  background:var(--black);padding:60px 48px;
+  overflow:visible;
+  transition:background .4s;
+}
+.process-step::after{display:none}
+.process-step:hover{background:rgba(32,96,232,.025);transform:none}
+.process-step-num{
+  position:static;display:block;
+  font-size:72px;color:rgba(255,255,255,.05);
+  margin-bottom:28px;top:auto;right:auto;
+  transition:color .4s;
+}
+.process-step:hover .process-step-num{color:rgba(32,96,232,.22);transform:none}
+
+/* ── Footer link hover underline draw-in ── */
+.footer-link{position:relative;display:inline-block}
+.footer-link::after{
+  content:'';position:absolute;bottom:-1px;left:0;width:0;height:1px;
+  background:var(--white);
+  transition:width .3s cubic-bezier(.22,1,.36,1);
+}
+.footer-link:hover::after{width:100%}
+
+/* ── Mobile cinematic ── */
+@media(max-width:768px){
+  .statement-text{font-size:clamp(40px,10vw,72px)}
+  #hero{min-height:100svh}
+  .process-step{padding:44px 24px}
+}

@@ -23,6 +23,9 @@
 </head>
 <body>
 
+<div id="cursor" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+
 <a href="#main" class="skip-link">Skip to main content</a>
 <div id="progress-bar" aria-hidden="true"></div>
 <div id="grain" aria-hidden="true"></div>
@@ -57,62 +60,21 @@
   <span class="hero-bg-word" aria-hidden="true">Klaido</span>
 
   <div class="w">
-    <div class="hero-center reveal">
-      <div class="hero-index">Missed call automation for service businesses</div>
+    <div class="hero-center">
+      <div class="hero-index hero-fade">Missed call automation for service businesses</div>
 
       <h1 class="hero-h1">
-        Missed calls.<br>
-        <em>Booked automatically.</em>
+        <span class="hero-word">Missed</span> <span class="hero-word">calls.</span><br>
+        <em><span class="hero-word">Booked</span> <span class="hero-word">automatically.</span></em>
       </h1>
 
-      <p class="hero-sub">
+      <p class="hero-sub hero-fade">
         When someone calls and you can't pick up, they get a text back, a follow-up, and a way to book. Within 60 seconds. Every time.
       </p>
 
-      <div class="hero-actions">
-        <button class="btn-fill btn-fill--lg" onclick="scrollToEl('#demo')">Watch Live Demo →</button>
+      <div class="hero-actions hero-fade">
+        <button class="btn-fill btn-fill--lg" onclick="scrollToEl('#demo')">See How It Works</button>
         <button class="btn-ghost btn-ghost--lg" onclick="scrollToEl('#cta')">Get This Set Up</button>
-      </div>
-    </div>
-
-    <!-- Hero card as product visual -->
-    <div class="hero-card-wrap reveal">
-      <div class="hero-card">
-        <div class="hero-card-top">
-          <div class="hero-card-dot"></div>
-          <span class="hero-card-label">What happens when you miss a call</span>
-        </div>
-        <div class="hero-card-body">
-          <div class="hero-card-event card-step" id="card-step-1">
-            <div class="hero-card-icon hero-card-icon--missed"></div>
-            <div>
-              <div class="hero-card-event-title">Missed call — Dave M.</div>
-              <div class="hero-card-event-sub">HVAC repair · 11:42 PM</div>
-            </div>
-            <div class="hero-card-tag hero-card-tag--missed">Missed</div>
-          </div>
-          <div class="hero-card-arrow card-step" id="card-step-2">↓</div>
-          <div class="hero-card-event hero-card-event--captured card-step" id="card-step-3">
-            <div class="hero-card-icon hero-card-icon--captured"></div>
-            <div>
-              <div class="hero-card-event-title">Text sent in 45 seconds</div>
-              <div class="hero-card-event-sub">"Hey, I just missed your call — how can I help?"</div>
-            </div>
-            <div class="hero-card-tag hero-card-tag--captured">Replied</div>
-          </div>
-          <div class="hero-card-arrow card-step" id="card-step-4">↓</div>
-          <div class="hero-card-event hero-card-event--booked card-step" id="card-step-5">
-            <div class="hero-card-icon hero-card-icon--booked"></div>
-            <div>
-              <div class="hero-card-event-title">Appointment booked</div>
-              <div class="hero-card-event-sub">Tomorrow, 9:00 AM · AC repair</div>
-            </div>
-            <div class="hero-card-tag hero-card-tag--booked">Booked</div>
-          </div>
-        </div>
-        <div class="hero-card-footer card-step" id="card-step-6">
-          <span class="hero-card-footer-note">Dave booked. You were already asleep.</span>
-        </div>
       </div>
     </div>
   </div>
@@ -188,27 +150,27 @@
           </div>
         </div>
         <div class="sms-body">
-          <div class="sms-bubble sms-bubble--out reveal">
+          <div class="sms-bubble sms-bubble--out">
             <span>Hey Dave — I just missed your call. What can I help you with?</span>
             <div class="sms-meta">11:43 PM · Delivered</div>
           </div>
-          <div class="sms-bubble sms-bubble--in reveal d1">
+          <div class="sms-bubble sms-bubble--in">
             <span>Hey yeah my AC stopped working, need someone to come out and look at it</span>
             <div class="sms-meta">11:44 PM</div>
           </div>
-          <div class="sms-bubble sms-bubble--out reveal d2">
+          <div class="sms-bubble sms-bubble--out">
             <span>Got it — I can get out tomorrow morning. Does 9am work for you?</span>
             <div class="sms-meta">11:44 PM · Delivered</div>
           </div>
-          <div class="sms-bubble sms-bubble--in reveal d3">
+          <div class="sms-bubble sms-bubble--in">
             <span>9am works perfect</span>
             <div class="sms-meta">11:45 PM</div>
           </div>
-          <div class="sms-bubble sms-bubble--out reveal d3">
+          <div class="sms-bubble sms-bubble--out">
             <span>You're all set — booked for tomorrow at 9am. See you then 👍</span>
             <div class="sms-meta">11:45 PM · Delivered</div>
           </div>
-          <div class="sms-booked reveal d3">
+          <div class="sms-booked">
             <div class="sms-booked-check">✓</div>
             <div class="sms-booked-text">Job booked · You were already asleep</div>
           </div>

@@ -31,28 +31,6 @@ window.addEventListener('scroll', () => {
 }, {passive: true});
 
 
-/* ── Hero card step animation ── */
-(function() {
-  const steps = document.querySelectorAll('.card-step');
-  if (!steps.length) return;
-  steps.forEach((step, i) => {
-    setTimeout(() => step.classList.add('visible'), 600 + i * 400);
-  });
-  // Loop — replay every 6s
-  setInterval(() => {
-    steps.forEach(s => s.classList.remove('visible'));
-    setTimeout(() => {
-      steps.forEach((step, i) => {
-        setTimeout(() => step.classList.add('visible'), i * 400);
-      });
-    }, 300);
-  }, 6000 + steps.length * 400);
-})();
-
-/* ── Hero reveals ── */
-setTimeout(() => {
-  document.querySelectorAll('#hero .reveal').forEach(el => el.classList.add('in'));
-}, 150);
 
 function scrollToEl(sel) {
   document.querySelector(sel)?.scrollIntoView({behavior:'smooth'});
@@ -284,6 +262,92 @@ gsap.to('.hero-bg-word', {
   y: 120,
   ease: 'none',
   scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 1.5 }
+});
+
+/* ── Custom cursor (pointer devices only) ── */
+(function() {
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  const dot = document.getElementById('cursor');
+  const ring = document.getElementById('cursor-ring');
+  if (!dot || !ring) return;
+  document.body.classList.add('cursor-ready');
+  let cx = 0, cy = 0, rx = 0, ry = 0, visible = false;
+  document.addEventListener('mousemove', e => {
+    cx = e.clientX; cy = e.clientY;
+    dot.style.left = cx + 'px';
+    dot.style.top = cy + 'px';
+    if (!visible) {
+      visible = true;
+      dot.style.opacity = '1';
+      ring.style.opacity = '1';
+    }
+  });
+  function animRing() {
+    rx += (cx - rx) * 0.11;
+    ry += (cy - ry) * 0.11;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animRing);
+  }
+  animRing();
+  document.addEventListener('mouseleave', () => { dot.style.opacity = '0'; ring.style.opacity = '0'; visible = false; });
+  document.querySelectorAll('a, button, [onclick]').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      ring.style.width = '56px';
+      ring.style.height = '56px';
+      ring.style.borderColor = 'rgba(32,96,232,.65)';
+    });
+    el.addEventListener('mouseleave', () => {
+      ring.style.width = '36px';
+      ring.style.height = '36px';
+      ring.style.borderColor = 'rgba(255,255,255,.22)';
+    });
+  });
+})();
+
+/* ── GSAP hero entrance: words slide up ── */
+(function() {
+  const words = document.querySelectorAll('.hero-word');
+  const fades = document.querySelectorAll('.hero-fade');
+  if (!words.length) return;
+  gsap.set(words, { opacity: 0, y: 72, skewY: 5 });
+  gsap.set(fades, { opacity: 0, y: 28 });
+  gsap.to(words, {
+    opacity: 1, y: 0, skewY: 0,
+    duration: 1.15,
+    ease: 'power3.out',
+    stagger: 0.1,
+    delay: 0.3
+  });
+  gsap.to(fades, {
+    opacity: 1, y: 0,
+    duration: 1,
+    ease: 'power2.out',
+    stagger: 0.16,
+    delay: 0.85
+  });
+})();
+
+/* ── GSAP SMS sequential reveal ── */
+gsap.set('.sms-bubble, .sms-booked', { opacity: 0, y: 18 });
+ScrollTrigger.create({
+  trigger: '.sms-demo',
+  start: 'top 65%',
+  once: true,
+  onEnter() {
+    gsap.to('.sms-bubble', {
+      opacity: 1, y: 0,
+      duration: 0.6,
+      ease: 'power2.out',
+      stagger: 0.38
+    });
+    gsap.to('.sms-booked', {
+      opacity: 1, y: 0,
+      duration: 0.7,
+      ease: 'back.out(1.5)',
+      delay: 0.38 * document.querySelectorAll('.sms-bubble').length + 0.1
+    });
+  }
 });
 
 /* ── Expose functions to global scope for inline onclick handlers ── */
