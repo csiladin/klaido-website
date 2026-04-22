@@ -140,21 +140,25 @@ button{font-family:var(--sans);cursor:pointer}
   box-shadow:0 20px 56px rgba(0,0,0,.4);
 }
 
-/* ── Card badge ── */
-.card-badge{
-  position:absolute;top:-1px;right:20px;
-  background:var(--blue);color:#fff;
-  font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-  padding:5px 12px;border-radius:0 0 10px 10px;
+/* ── Card label row ── */
+.card-label-row{
+  display:flex;align-items:center;gap:10px;margin-bottom:18px;
 }
-
-/* ── Card label ── */
 .card-label{
   font-size:11px;font-weight:600;letter-spacing:.1em;
-  text-transform:uppercase;margin-bottom:18px;
+  text-transform:uppercase;
 }
 .card--primary .card-label{color:var(--blue)}
 .card--secondary .card-label{color:var(--dimmer)}
+
+/* ── Card badge (non-interactive label) ── */
+.card-badge{
+  font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:rgba(32,96,232,.75);
+  border:1px solid rgba(32,96,232,.25);
+  padding:3px 9px;border-radius:100px;
+  pointer-events:none;user-select:none;
+}
 
 /* ── Card heading ── */
 .card h2{
@@ -415,8 +419,10 @@ footer a:hover{color:var(--white)}
 
         <!-- PRIMARY CARD -->
         <a href="#missed-calls" class="card card--primary">
-          <div class="card-badge">Start Here</div>
-          <div class="card-label">Missed Call Recovery</div>
+          <div class="card-label-row">
+            <div class="card-label">Missed Call Recovery</div>
+            <div class="card-badge" aria-label="Most popular option">Most Popular</div>
+          </div>
           <h2>I'm Losing Customers From Missed Calls</h2>
           <p>If someone calls and you miss it, we automatically respond so they're not lost.</p>
           <button class="card-btn">Fix My Missed Calls →</button>
@@ -424,7 +430,9 @@ footer a:hover{color:var(--white)}
 
         <!-- SECONDARY CARD -->
         <a href="#website" class="card card--secondary">
-          <div class="card-label">Website &amp; Lead Generation</div>
+          <div class="card-label-row">
+            <div class="card-label">Website &amp; Lead Generation</div>
+          </div>
           <h2>I Need a Website That Converts</h2>
           <p>Make sure the people who find you actually reach out.</p>
           <button class="card-btn">Get My Website →</button>
