@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Klaido — Missed calls. Booked automatically.</title>
+<meta name="description" content="When someone calls and you can't pick up, they get a text back, a follow-up, and a way to book — automatically, within 60 seconds.">
+<meta name="theme-color" content="#060605">
+<link rel="canonical" href="https://klaido.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://klaido.com/">
+<meta property="og:title" content="Klaido — Missed calls. Booked automatically.">
+<meta property="og:description" content="When someone calls and you can't pick up, they get a text back, a follow-up, and a way to book — automatically.">
+<meta property="og:image" content="https://klaido.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Klaido — Missed calls. Booked automatically.">
+<meta name="twitter:description" content="When someone calls and you can't pick up, they get a text back, a follow-up, and a way to book — automatically.">
+<meta name="twitter:image" content="https://klaido.com/og-image.jpg">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha384-d+vyQ0dYcymoP8ndq2hW7FGC50nqGdXUEgoOUGxbbkAJwZqL7h+jKN0GGgn9hFDS" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha384-poC0r6usQOX2Ayt/VGA+t81H6V3iN9L+Irz9iO8o+s0X20tLpzc9DOOtnKxhaQSE" crossorigin="anonymous" defer></script>
+<link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+<div id="cursor" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+<div id="progress-bar" aria-hidden="true"></div>
+<div id="grain" aria-hidden="true"></div>
+
+<!-- ── NAV ── -->
+<nav id="nav" aria-label="Main navigation">
+  <a href="/" class="nav-logo">Klaido</a>
+  <ul class="nav-links">
+    <li><a href="#solution">How It Works</a></li>
+    <li><a href="#proof">Results</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <button class="nav-cta" onclick="scrollToEl('#cta')">Get Started Free →</button>
+  <button id="nav-ham" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
+</nav>
+
+<div id="mobile-nav" aria-hidden="true">
+  <a href="#solution" onclick="toggleMobileNav()">How It Works</a>
+  <a href="#proof" onclick="toggleMobileNav()">Results</a>
+  <a href="#faq" onclick="toggleMobileNav()">FAQ</a>
+  <button class="btn-fill" onclick="toggleMobileNav();requestAnimationFrame(()=>scrollToEl('#cta'))" style="font-size:16px;padding:16px 40px">Get This Set Up</button>
+</div>
+
+<main id="main">
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-blob" aria-hidden="true"></div>
+  <span class="hero-bg-word" aria-hidden="true">Klaido</span>
+
+  <div class="w">
+    <div class="hero-center">
+      <div class="hero-index hero-fade">For service contractors who miss calls on the job</div>
+
+      <h1 class="hero-h1">
+        <span class="hero-word">Missed</span> <span class="hero-word">calls.</span><br>
+        <em><span class="hero-word">Booked</span> <span class="hero-word">automatically.</span></em>
+      </h1>
+
+      <p class="hero-sub hero-fade">
+        You miss a call. They get a text back in 60 seconds. The job books itself. You find out when it's done.
+      </p>
+
+      <div class="hero-actions hero-fade">
+        <button class="btn-fill btn-fill--lg" onclick="scrollToEl('#problem')">See how it works ↓</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── PROBLEM ── -->
+<section id="problem">
+  <div class="w">
+    <p class="problem-headline reveal">Every day, you're losing jobs you don't know about.</p>
+    <div class="problem-items">
+      <div class="problem-item reveal">
+        <div class="problem-item-num">01</div>
+        <div class="problem-item-body">
+          <div class="problem-item-title">Missed calls go to whoever answers next.</div>
+          <div class="problem-item-desc">Nobody waits. They hang up and call the next result on Google. You'll never know it happened.</div>
+        </div>
+      </div>
+      <div class="problem-item reveal">
+        <div class="problem-item-num">02</div>
+        <div class="problem-item-body">
+          <div class="problem-item-title">No website means you're invisible.</div>
+          <div class="problem-item-desc">When someone searches "HVAC near me" or "roofer [your city]" — if you're not there, you don't exist to them.</div>
+        </div>
+      </div>
+      <div class="problem-item reveal">
+        <div class="problem-item-num">03</div>
+        <div class="problem-item-body">
+          <div class="problem-item-title">Slow reply loses the job instantly.</div>
+          <div class="problem-item-desc">Whoever texts back first wins. Right now, when you can't answer — that's not you.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── SOLUTION ── -->
+<section id="solution">
+  <div class="w">
+    <div class="solution-inner">
+      <div class="solution-text reveal">
+        <div class="section-kicker">What you get</div>
+        <h2 class="section-h2">Two things.<br><em>One setup call.</em></h2>
+        <p class="solution-desc">A website that shows up when people search for your trade. And a system that texts back every missed call in under 60 seconds — handles the conversation, books the job, and notifies you when it's done.</p>
+        <p class="solution-note">Set up once. Nothing to manage after that.</p>
+      </div>
+      <div class="solution-flow reveal">
+        <div class="sflow-item">
+          <div class="sflow-time">11:42 PM</div>
+          <div class="sflow-content">
+            <div class="sflow-title">Missed call — Dave M.</div>
+            <div class="sflow-sub">HVAC repair</div>
+          </div>
+          <div class="sflow-tag sflow-tag--missed">Missed</div>
+        </div>
+        <div class="sflow-item">
+          <div class="sflow-time">11:43 PM</div>
+          <div class="sflow-content">
+            <div class="sflow-title">Auto-text sent</div>
+            <div class="sflow-sub">"Hey Dave, just missed your call…"</div>
+          </div>
+          <div class="sflow-tag sflow-tag--sent">Sent</div>
+        </div>
+        <div class="sflow-item">
+          <div class="sflow-time">11:46 PM</div>
+          <div class="sflow-content">
+            <div class="sflow-title">Job booked — tomorrow 9am</div>
+            <div class="sflow-sub">You were already asleep</div>
+          </div>
+          <div class="sflow-tag sflow-tag--booked">Booked ✓</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── PROOF ── -->
+<section id="proof">
+  <div class="w">
+    <div class="proof-stats">
+      <div class="proof-stat reveal">
+        <div class="proof-num">60<span class="proof-unit">s</span></div>
+        <div class="proof-label">Response time after a missed call</div>
+      </div>
+      <div class="proof-sep" aria-hidden="true"></div>
+      <div class="proof-stat reveal d1">
+        <div class="proof-num">24<span class="proof-unit">/7</span></div>
+        <div class="proof-label">Runs nights, weekends, holidays</div>
+      </div>
+      <div class="proof-sep" aria-hidden="true"></div>
+      <div class="proof-stat reveal d2">
+        <div class="proof-num">14</div>
+        <div class="proof-label">Days free — no card required</div>
+      </div>
+    </div>
+    <blockquote class="proof-quote reveal">
+      <p>"I was missing 8 or 10 calls a week and just writing them off. Had three jobs booked last week from calls I never answered."</p>
+      <footer><cite>Marcus T. — Owner, HVAC Company · Austin, TX</cite></footer>
+    </blockquote>
+    <div class="proof-badge reveal">Built for operators. Not corporations.</div>
+  </div>
+</section>
+
+
+<!-- ── FAQ ── -->
+<section id="faq">
+  <div class="w">
+    <div class="section-title-center reveal">
+      <h2 class="section-h2">Common questions.</h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How fast does it respond?<div class="faq-icon" aria-hidden="true">+</div></button>
+        <div class="faq-a"><div class="faq-a-inner">Usually 30–60 seconds. Fast enough that most callers assume you saw the missed call and texted back yourself.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Does it actually sound like me?<div class="faq-icon" aria-hidden="true">+</div></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes — I write the messages specifically for your business. Something like: "Hey, this is [your name] — just missed your call. What can I help with?" Not a bot. Not a script. You, responding faster.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What if they ask something I need to answer myself?<div class="faq-icon" aria-hidden="true">+</div></button>
+        <div class="faq-a"><div class="faq-a-inner">The system handles the common stuff — scheduling, service area, basic questions. If something needs you, it flags it and sends you a notification right away.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How do I get started?<div class="faq-icon" aria-hidden="true">+</div></button>
+        <div class="faq-a"><div class="faq-a-inner">One 20-minute call. I set everything up while we're talking — your number, your messages, your calendar. You're live by end of day. 14-day free trial, no card required.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── CTA ── -->
+<section id="cta">
+  <div class="w">
+    <div class="cta-inner reveal">
+      <div class="cta-left">
+        <div class="section-kicker">Get started free</div>
+        <h2 class="cta-h2">See what this looks like<br><em>for your business.</em></h2>
+        <p class="cta-body">One call. I'll show you the system live and set it up on the spot. You're running by end of day.</p>
+        <div id="lead-form-wrap">
+          <form class="lead-form" onsubmit="submitLead(event)" novalidate>
+            <div class="lead-row">
+              <input class="lead-input" type="text" name="name" placeholder="Your name" autocomplete="name" aria-label="Your name" required>
+              <input class="lead-input" type="tel" name="phone" placeholder="Phone number" autocomplete="tel" aria-label="Phone number" required>
+            </div>
+            <input class="lead-input" type="text" name="business" placeholder="Your trade (HVAC, plumbing, roofing...)" autocomplete="organization" aria-label="Your trade" required>
+            <button class="btn-fill btn-fill--lg" type="submit" style="width:100%;justify-content:center">Show me how it works →</button>
+          </form>
+          <div class="cta-small" style="margin-top:12px">Free trial. No card. Live by end of day.</div>
+        </div>
+        <div class="form-success" id="form-success">
+          <div class="form-success-h">Got it.</div>
+          <div class="form-success-p">I'll reach out within a few hours to schedule a time. Talk soon.</div>
+        </div>
+      </div>
+      <div class="cta-right">
+        <div class="cta-personal">
+          <div class="about-avatar">Cl</div>
+          <div class="cta-personal-text">
+            <div class="cta-personal-name">Clay — Founder, Klaido</div>
+            <div class="cta-personal-note">I configure everything on the call personally. Your number, your messages, your calendar. US-based. Done-for-you. Live same day.</div>
+          </div>
+        </div>
+        <div class="cta-pricing">
+          <div class="cta-pricing-amount">$97<span>/mo</span></div>
+          <div class="cta-pricing-note">after 14-day free trial · cancel any time</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── FOOTER ── -->
+<footer aria-label="Site footer">
+  <div class="w">
+    <div class="footer-cols">
+      <div>
+        <div class="footer-logo" style="margin-bottom:14px">Klaido</div>
+        <div class="footer-copy" style="line-height:1.8;max-width:220px">Missed call follow-up for service businesses. Built by one person.</div>
+      </div>
+      <div>
+        <div class="footer-heading">Product</div>
+        <div class="footer-links">
+          <a href="#solution" class="footer-link">How It Works</a>
+          <a href="#proof" class="footer-link">Results</a>
+          <a href="#faq" class="footer-link">FAQ</a>
+          <a href="#cta" class="footer-link">Get Started</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <div class="footer-links">
+          <a href="mailto:clay@klaido.com" class="footer-link">clay@klaido.com</a>
+          <a href="#cta" class="footer-link">Book a call</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-inner" style="padding:24px 0">
+      <div class="footer-copy">© 2026 Klaido</div>
+      <div style="font-size:12px;color:var(--dim)">Built by Clay — <a href="mailto:clay@klaido.com" style="color:var(--dim)">clay@klaido.com</a></div>
+    </div>
+  </div>
+</footer>
+
+<button id="mobile-cta" onclick="scrollToEl('#cta')" aria-label="Get this set up">💬</button>
+
+<div id="sticky-bar">
+  <div class="sticky-left">
+    <div class="sticky-copy">Every missed call either books itself — or walks to a competitor.</div>
+  </div>
+  <button class="btn-fill" onclick="scrollToEl('#cta')" style="padding:10px 24px;font-size:13px">Get This Set Up →</button>
+</div>
+
+<div id="exit-modal" role="dialog" aria-modal="true" aria-labelledby="exit-heading">
+  <div class="exit-box">
+    <button class="exit-close" onclick="closeExit()">✕</button>
+    <h2 class="exit-h" id="exit-heading">Before you go —<br><em>how much is a missed job worth to you?</em></h2>
+    <p class="exit-p">Leave your email. I'll show you exactly how this works for your trade.</p>
+    <input class="exit-input" id="exit-email" type="email" placeholder="your@email.com" aria-label="Your email address">
+    <button class="btn-fill" style="width:100%;justify-content:center;padding:14px" onclick="submitExit()">Show me how it works →</button>
+    <button class="exit-skip" onclick="closeExit()">No thanks</button>
+  </div>
+</div>
+
+</main>
+
+<script type="module" src="/src/main.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Klaido",
+  "url": "https://klaido.com",
+  "description": "Missed call automation for service businesses. When someone calls and you can't pick up, they get a text back, a follow-up, and a way to book — automatically.",
+  "areaServed": "US",
+  "serviceType": ["Missed Call Automation", "SMS Follow-up", "Appointment Booking"],
+  "offers": { "@type": "Offer", "description": "14-day free trial, $97/month after, full setup included" }
+}
+</script>
+</body>
+</html>
